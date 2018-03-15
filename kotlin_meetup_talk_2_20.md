@@ -53,6 +53,9 @@ Today, Kotlin is our primary development language for Android
 - How are we using Kotlin today
 - Tips for incorporating Kotlin into your project
 
+^ I want to talk about why we chose Kotlin
+^ we did we think the investment would be worthwhile
+
 —
 
 # Why Kotlin?
@@ -127,11 +130,6 @@ Having experimented with Kotlin outside Udacity, we knew the language could help
 - Set out to migrate our Settings screen
 <br>
 - During testing, we looked closely for 2 things
-
-<br>
-
-- Stability issues?
-- Impacts to development process?  
 
 ^ Settings was fairly small and isolated at the time
 
@@ -341,7 +339,7 @@ Don’t go wild trying to write “idiomatic” Kotlin.
 
 —
 
-> “Just because you can doesn’t mean you should”
+# [fit] “Just because you can doesn’t mean you should”
 
 —
 
@@ -352,7 +350,7 @@ Don’t go wild trying to write “idiomatic” Kotlin.
 
 —
 
-> “Explore, experiment, migrate, refactor”
+# [fit] “Explore, experiment, migrate, refactor”
 
 —
 
