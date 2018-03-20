@@ -226,10 +226,53 @@ ___
 
 # Variable number of arguments
 
+we can define a parameter to accept a variable number of arguments T
+
+^ like in Java
+
+use the `vararg` keyword
+
+the `vararg` param is then treated as an array of type T
 ___
+
+# Variable number of arguments
+
+```Kotlin
+fun helloFunctions(exclamation:String, vararg excitingThings:String) {
+  for(excitingThing in excitingThings) {
+    println(exclamation + ", " + excitingThing)
+  }
+}
+
+helloFunctions("yay!", "Droidcon Boston", "Kotlin", "Android")
+```
+___
+
+# Variable number of arguments
+
+typically, a `vararg` parameter will be the last one
+
+can use anywhere if
+- other parameters are called using named argument syntax
+- last parameter is a function passed outside the parentheses
+
+```Kotlin
+helloFunctions("Droidcon Boston", "Kotlin", "Android", exlamation="yay!")
+```
+___
+
 
 # Variable number of arguments spreading
 
+Use `spread` operator to pass an existing array of values
+
+```Kotlin
+val thingsToBeExcitedAbout = arrayOf("Droidcon Boston", "Kotlin", "Android")
+helloFunctions("yay!", *thingsToBeExcitedAbout)
+helloFunctions("yay!", "coffee", *thingsToBeExcitedAbout)
+```
+
+- can be alone, or with other passed varargs as well
 ___
 
 # Return Types
@@ -284,19 +327,24 @@ fun helloFunctions(exclamation:String, excitingThing:String="functions")
 ```
 ___
 
+# Generic Functions
+
+Like classes, functions may have generic type parameters
+
+```Kotlin
+fun <T> log(item: T) {
+    // ...
+}
+
+log(Foo())
+log(Goo())
+```
+
+___
+
 > concise
 > convenient
 > flexible
-
-___
-
-# Templated Functions
-
-___
-
-# Higher-Order Function Performance
-
-performance hit with higher-order?
 
 ___
 
