@@ -109,7 +109,7 @@ fun helloFunctions() {
   println("Yay, Functions")
 }
 ```
-
+^ if converted with Android Studio we might get something like this
 ^ not that different right?
 
 - adds the fun keyword
@@ -151,8 +151,7 @@ ___
 - return types
     - when can omit?
     - when can infer?
-- templated
-- higher order
+- generic
 
 ___
 
@@ -164,6 +163,7 @@ fun helloFunctions(excitingThing:String) {
 }
 
 helloFunctions("functions")
+// outputs "Yay, functions"
 ```
 
 ^ parameters are defined using <name> colon <type>
@@ -172,15 +172,18 @@ ___
 
 # Parameters
 
+^ of course we can have multiple parameters as well
+^ multiple parameters are separated by commas
+
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String) {
   println(exclamation + ", " + excitingThing)
 }
 
 helloFunctions("Yay", "functions")
-```
 
-^ multiple parameters are separated by commas
+// outputs "Yay, functions"
+```
 
 ___
 
@@ -361,7 +364,7 @@ ___
 # Variations In Scope
 
 - top-level
-- methods
+- member functions
 - local
 - CompanionObject
 - extension functions
@@ -369,46 +372,182 @@ ___
 ___
 
 # Top-Level functions
-- available everywhere
 - not tied to a class
-- enabling interesting patterns
+- defined within a Kotlin file
+- belong to their declared file's package
+- import to use within other packages
+- enable interesting patterns
 
 ___
 
 # Top-Level Function Patterns
-- replace need for globablly available methods or instances
-- ex: logger
+- no need for stateless classes filled with static methods
+- replace your "Util" or "Helper" classes with functions
 
-- basic building block of dsls
+^ ex: logger
+^ possibly even fewer classes/objects to be dependent on
 
 ___
 
 # Top-Level Function Considerations
 
-- generated as static? (** need to check this**)
-- available from Java using special convention
+- not truly removing classes
+- generated as a public static method on a class using a special convention
+- <function's file name>Kt.java
 
 ___
 
-# Methods
+# Top-Level Function Considerations
+
+Within Logging.kt
+
+```Kotlin
+fun log(error:Throwable) {...}
+
+log(Throwable("oops"))
+```
+
+Generates
+
+```Java
+public class LoggingKt {
+  public static void log(Throwable error) {...}
+}
+
+LoggingKt.log(new Throwable("oops"))
+```
+
+___
+
+# Top-Level Function Considerations
+
+Can override the generated class/file name
+
+- add `@file:JvmName(<desired class name>)` to function's file
+- must be before the declared package
+
+___
+
+# Top-Level Function Considerations
+```Kotlin
+@file:JvmName("LoggingFunctions")
+package logging
+
+fun log(error:Throwable) {...}
+```
+
+```Java
+LoggingFunctions.log(...)
+```
+___
+
+# Top-Level Function Summary
+
+- function declared in a file outside of any class
+- can remove unneeded helper/util classes
+___
+
+# Member Functions
 
 - function on a class or object
-- **default arguments can't be changed in overridden methods**
+- like a Java method
+
+___
+
+# Member Functions
+
+```Kotlin
+class Demo() {
+    fun goo() { ... }
+}
+
+// create instance of class Demo and calls goo
+Demo().goo()
+```
+
+___
+
+# Member Function Considerations
+
+- default arguments can't be changed in overridden methods
+- if overriding a method, you must omit the default values
 
 ___
 
 # Local Functions
 
+Functions inside of functions
+
 - can create a function that is scoped to another function
-- similar to javascript?
-- useful if your function is only ever called from another function
+- useful if your function/method is only ever called from another function
+
+___
+
+# Local Functions
+
+Why would you want this?
+
+- clean code
+- avoids code duplication
+- avoid deep chains of function calls
+
+___
+
+# Local Functions
+
+- declare like any other function, just within a function
+- have access to all params and variables of the enclosing function
+
+___
+
+# Local Functions
+
+```Kotlin
+fun parseAccount(response:AccountResponse) : Account {
+  ...
+
+  val hobbies = response.getField("hobbies").map{
+    val key = it.getField("key")
+    Hobby(key)
+  }
+
+  val favoriteFoods = response.getField("favorite_foods").map{
+    val key = it.getField("key")
+    Food(key)
+  }
+}
+```
+
+___
+
+# Local Functions
+
+```Kotlin
+fun parseAccount(response:AccountResponse) : Account {
+  fun parseKey(entity:ResponseEntity) = entity.getField("key")
+
+  ...
+
+  val hobbies = response.getField("hobbies").map{
+    val key = parseKey(it)
+    Hobby(key)
+  }
+
+  val favoriteFoods = response.getField("favorite_foods").map{
+    val key = parseKey(it)
+    Food(key)
+  }
+}
+```
 
 ___
 
 # Local Function Considerations
 
-- local function vs private method?
-- performant?
+- local function or private method?
+- is the logic going to be needed outside the current function?
+- does the logic need to be tested in isolation?
+- is the enclosing function still readable?
 
 ___
 
@@ -578,6 +717,8 @@ can use extensions, default params, etc to cleanup common apis
 - shared prefs
 - ktx
 - anko
+
+many convienient string helper functions provided
 
 ___
 
