@@ -33,23 +33,12 @@ ___
 
 ___
 
-# Kotlin ♥️ Functions
-## Many great features
-- Both member functions and top-level functions
-- Functions that take other functions as arguments
-- Terrific stdlib filled with useful functions
-
-___
-
-# 3 Key Takeaways
-
-- Easy to get started
-- Many ways to write, modify and utilize functions
-- Functions enable us to reimagine how we build projects
-
-___
-
 ## Easy to get started, but much more to discover
+
+- Getting started is simple
+- Can use the IDE conversion tool
+- Can try online
+- Easy to transfer existing knowledge
 
 ^ getting started with Kotlin functions is easy
 ^ we'll see how quickly you can convert a java method to a kotlin function and you'll be off and running
@@ -73,6 +62,14 @@ ___
 ___
 
 > We're going to explore function's from their basics variants to more complex iterations
+
+___
+
+# Takeaways
+
+- Easy to get started
+- Many ways to write, modify and utilize functions
+- Functions enable us to reimagine how we build projects
 
 ___
 
@@ -551,15 +548,49 @@ ___
 
 ___
 
-# Functions on a CompanionObject
+# Companion Objects
 
-- how do these differ?
+- no static method/functions in Kotlin
+- recommended to use top-level functions instead
+- but what if you need access to private members of an object?
 
 ___
 
-# Functions on a CompanionObject Considerations
+# Companion Objects
 
-- ???
+- want to create a factory method?
+- define a member function on a companion object to gain access to private members/constructors
+
+___
+
+# Companion Objects
+
+```Kotlin
+class Foo private constructor(val key:String)
+
+// won't work
+// can't access the private constructor
+fun createFoo(key:String) : Foo {
+    return Foo(key)
+}
+```
+
+___
+
+# Companion Objects
+
+```Kotlin
+class Goo private constructor(val key:String) {
+    companion object {
+        fun createGoo(key:String) : Goo {
+            return Goo(key)
+        }
+    }
+}
+
+// can then call the factory method
+Goo.createGoo("somekey")
+```
 
 ___
 
@@ -567,29 +598,110 @@ ___
 
 ___
 
-# [Special Cases]
+# Special Cases
 
 - `infix`
-- `inline`
 - `extension`
 - higher-order
 - lambdas
+- `inline`
 - anonymous
 
 ___
 
 # infix
 
+- `infix` keyword enables usage of infix notation
+- can omit the dot & parentheses for the function call
+
+- ```Kotlin
+"key" to "value"
+```
+^ the 'to' function used to return a Pair
+___
+
+# infix
+
+- must be a member function or extension function
+^ we will look at extension functions shortly
+
+- must take a single, non-varargs, parameter with no default value
+
+___
+
+# infix
+
+```Kotlin
+class User{
+    infix fun addNickname(name:String){...}
+}
+
+// call the function without dot or parentheses
+val user = User()
+user addNickname "shades"
+```
+
+___
+
+# infix
+
+- can provide a very clean, human-readable syntax
+- core building block of custom DSLs
+
 ___
 
 # Extension Functions
 
-- people love and know these
-- extend existing class
-- can cleanup apis, simplify or remove helpers
-- again can be leveraged for dsls
+- extend the functionality of an existing class
+- use as if it were a member of a class
+- defined outside the class
 
 ___
+
+# Extension Functions
+
+- cleanup or extend classes & apis you don't control
+- remove helper classes & simplify top-level functions
+- can be leveraged for DSLs
+
+___
+
+# Extension Functions
+
+```Kotlin
+fun showToast(
+  context: Context,
+  msg:String,
+  duration: Int = Toast.LENGTH_SHORT) {
+
+  Toast.makeText(context, msg, duration).show()
+}
+
+showToast(context, "Toast!")
+```
+^ top-level function
+^ requires a `Context` always be passed
+
+___
+
+# Extension Functions
+
+```Kotlin
+fun Context.showToast(
+  msg: CharSequence,
+  duration: Int = Toast.LENGTH_SHORT) {
+
+  Toast.makeText(this, msg, duration).show()
+}
+
+context.showToast("Toast!")
+```
+^ extension function
+^ `Context` is now the receiver and is called on the context
+^ can be defined anywhere
+
+___
+
 
 # Extension Function Considerations
 - how are these generated under the hood?
@@ -597,11 +709,26 @@ ___
 
 ___
 
+# Extension Function Considerations
+
+- extension functions are static methods that accept the receiver object as it's first argument
+- like with top-level functions the convention is to use <filename>Kt.<functionName>
+
+- ```Java
+ContextExtensionsKt.showToast(context, "Toast!");
+```
+
+___
+
 # Higher-Order Functions
 
-inception time
+- functions that take, or return, other functions
+- can be lambda or function reference
+- many examples in the Kotlin standard library `apply`, `also`, `run`
 
-functions that take other functions are parameters
+___
+
+# Higher-Order Functions
 
 - allow very interesting Patterns
 - can cleanup setup/teardown patterns such as shared prefs
@@ -611,38 +738,48 @@ ___
 
 # Higher-Order Functions
 
-- show example of usage
-- dont use lambda yet
+```Kotlin
+val predicate = { number:Int -> number > 5 }
+listOf(2,4,6,8).filter(predicate)
+```
+^ we pass the lambda val to the `filter` function on the list
+___
+
+# Higher-Order Functions
+
+```Kotlin
+fun filterTheList(value:Int) = value > 5
+listOf(2,4,6,8).filter(::filterTheList)
+```
+
+^ can also pass an existing function
 
 ___
 
 # Higher-Order Functions
 
-- if the last parameter is a function, can ommit the parentheses and
-lambda syntactic sugar
+if the last parameter of a function is a function, you can omit the parentheses
 
-threading syntax
-receiver functions in stdlib
-
-there is a convention that if the last parameter to a function is a function, and you're passing a lambda expression as the corresponding argument, you can specify it outside of parentheses
-
-___
-
-# lambdas
-
-> "A lambda expression or an anonymous function is a "function literal", i.e. a function that is not declared, but passed immediately as an expression"
+- ```Kotlin
+listOf(2,4,6,8).filter{ number -> number > 5 }
+```
+^ in this case, the type of the
 
 ___
 
-# anonymous functions
+# Higher-Order Functions
 
-- how are they different from a lambda
-- how do we use them (pass them to another function) ??
-- how are types inferred?
+```Kotlin
+fun getScoreCalculator(level:Level) {
+    when (level) {
+        Level.EASY -> { state:ScoreState -> state.score * 10 }
+        Level.HARD -> { state:ScoreState -> state.score * 5 * state.accuracy }
+    }
+}
+```
 
-___
-
-# function literals w/ receiver
+^ can return functions as well
+^ could be used as a factory to return strategy functions
 
 ___
 
@@ -650,61 +787,118 @@ ___
 
 > "Using higher-order functions imposes certain runtime penalties"
 
+- extra class created when using lambda
+- if lambda captures variables, extra object created on each call
+- how to solve?
+
 # inline
 
 - helps solve higher-order function performance hits
-- how?
+- body of the inlined function is substituted for invocations of the function
 
 ___
 
 ## inline
 
-- mark with inline keyword
-- does that then make all the fuction params inlined?
-- can use `noinline` for args if needed
+^ example from Kotlin in Action
+
+```Kotlin
+inline fun <T> synchronized(lock: Lock, action: () -> T): T {
+    lock.lock()
+    try {
+        return action()
+    }
+    finally {
+        lock.unlock()
+    }
+}
+
+val l = Lock()
+synchronized(l) {...}
+```
 
 ___
 
-## inline: returns
+## inline
 
-- non-local returns
-- crossline
+```Kotlin
+fun foo(l:Lock) {
+  println("before")
+  synchronized(l) {
+    println("action")
+  }
+  println("after")
+}
+```
 
-## inline: restrictions
+___
 
-- there are some restrictions..
+## inline
+
+With `inline` the generated code is equivalent to this
+```Kotlin
+fun goo(l:Lock) {
+  println("before")
+  lock.lock()
+  try {
+      println("action")
+  }
+  finally {
+      lock.unlock()
+  }
+  println("after")
+}
+```
+
+^ notice how the body of the synchronized function has been written within the body of foo
+
+^ more to be learned regarding the intrices of `inline`
 
 ___
 
 # Android Reimagined
 
-These features enabled us to rethink how we build our apps
+> These features enabled us to rethink how we build our apps
 
 ___
 
-# Android Reimagined
+# Avoiding `if`
 
-### Avoiding `if`
+```Kotlin
+if(foo != null) { ...}
 
-`foo?.let{}`
-`when(foo){
-  true ->
-  false ->
-  }`
+foo?.let{}
+```
 
 ___
+
+# Avoiding `if`
+
+```Kotlin
+if(game.level == EASY)  { }
+else if (game.level == NORMAL) {}
+else if (game.level == HARD) {}
+
+when(game.level){
+  EASY -> {}
+  NORMAL -> {}
+  HARD -> {}
+}
+```
 
 # Android Reimagined
 
 ## Safer Strategies
 
-`fun doTheThingSafely(theThing:() -> Unit){
+```Kotlin
+fun doTheThingSafely(theThing:() -> Unit) {
     try {
       theThing()
     } catch(error:Throwable) {
       // handle error
     }
-}`
+}
+```
 
 ___
 
@@ -714,11 +908,41 @@ ___
 
 can use extensions, default params, etc to cleanup common apis
 
-- shared prefs
-- ktx
-- anko
+- now seeing community supported examples of this
+- ktx: https://github.com/android/android-ktx
+- anko: https://github.com/Kotlin/anko
 
-many convienient string helper functions provided
+___
+
+# Android Reimagined
+
+## Android KTX
+
+^ from the android ktx github page
+
+```Kotlin
+sharedPreferences.edit()
+    .putString("key", "without ktx")
+    .putBoolean("isLessBoilerplate", false)
+    .apply()
+
+sharedPreferences.edit {
+  putString("key", "with ktx")
+  putBoolean("isLessBoilerplate", true)
+}
+```
+^ notice we dont have to call edit() or apply() anymore
+
+
+# Android Reimagined
+
+## Fewer Helpers to Pass Around
+
+Can utilize top-level functions for globally available actions such as logging
+
+- remove direct dependencies that must be shared
+- encourages configuration
+- can have nice testing benefits
 
 ___
 
@@ -726,11 +950,30 @@ ___
 
 ## Fewer Helpers to Pass Around
 
-Can utilized top-level functions for globally vailable actions such as logging
+```Kotlin
+object CustomLogger {
+  fun log(msg:String) {...}
+}
+```
 
-Remove direct dependencies that must be shared
-Allow's for configuration
-Impacts testing
+- traditional syntax
+- requires mocking when testing
+- extra class & nesting
+
+___
+
+# Android Reimagined
+
+## Fewer Helpers to Pass Around
+
+```Kotlin
+fun log(msg:String) {...}
+```
+
+- more fluent syntax
+- doesn't require mocking when testing
+- avoids extra class
+- encourages configuration
 
 ___
 
@@ -740,12 +983,32 @@ ___
 ???  dsl for parsing things from the Contentful sdk ???
 ___
 
-# Summary
+# In Closing
 
-functions let us do yada yada yada
+> Kotlin functions provide flexibility & freedom in how you build your apps
 
 ___
 
-# [fit] Thanks
+# In Closing
 
-## @n8ebel
+- Easy to get started
+- Can build your understanding and usage of functions over time
+- Enables you to rethink how you build your applications
+
+___
+
+# [fit] Thanks For Coming
+
+___
+
+# Let's Connect
+
+```kotlin
+with("n8ebel").apply{
+  Twitter
+  .com
+  Medium
+  Instagram
+  Facebook
+}
+```
