@@ -2,22 +2,6 @@ footer: @n8ebel
 build-lists: true
 slidenumbers: true
 
-# outline
-
-intro
-key takeaways
-
-transition
-
-parameter & type freedom
-
-transition
-
-scoping freedom
-
-transition
-
-___
 
 #[fit] fun() Talk
 
@@ -126,13 +110,13 @@ fun helloFunctions() = println("Yay, Functions")
 ^ this form is known as a single-expression function
 ___
 
-# So What's The Big Deal?
+# So What's Left?
 
 seems pretty straightforward, what else is there to know?
 
 ___
 
-# [fit] A Lot
+# A Lot
 
 ___
 
@@ -273,7 +257,8 @@ helloFunctions("yay!", "coffee", *thingsToBeExcitedAbout)
 ```
 
 - can be alone, or with other passed varargs as well
-___
+
+---
 
 # Return Types
 
@@ -442,6 +427,7 @@ ___
 
 - function declared in a file outside of any class
 - can remove unneeded helper/util classes
+
 ___
 
 # Member Functions
@@ -617,12 +603,15 @@ ___
 - ```Kotlin
 "key" to "value"
 ```
+
 ^ the 'to' function used to return a Pair
+
 ___
 
 # infix
 
 - must be a member function or extension function
+
 ^ we will look at extension functions shortly
 
 - must take a single, non-varargs, parameter with no default value
@@ -742,6 +731,7 @@ ___
 val predicate = { number:Int -> number > 5 }
 listOf(2,4,6,8).filter(predicate)
 ```
+
 ^ we pass the lambda val to the `filter` function on the list
 ___
 
@@ -763,6 +753,7 @@ if the last parameter of a function is a function, you can omit the parentheses
 - ```Kotlin
 listOf(2,4,6,8).filter{ number -> number > 5 }
 ```
+
 ^ in this case, the type of the
 
 ___
@@ -836,6 +827,7 @@ ___
 ## inline
 
 With `inline` the generated code is equivalent to this
+
 ```Kotlin
 fun goo(l:Lock) {
   println("before")
@@ -885,6 +877,7 @@ when(game.level){
   HARD -> {}
 }
 ```
+___
 
 # Android Reimagined
 
