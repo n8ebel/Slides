@@ -1,4 +1,4 @@
-footer: @n8ebel
+footer: @n8ebel #droidconbos
 build-lists: true
 slidenumbers: true
 
@@ -9,51 +9,55 @@ slidenumbers: true
 
 ^ At this point, I think it's safe to say most everybody here has at least heard of Kotlin
 
-^ If not, I encourage you to check it out
+^ If not, no worries.  I'm not going to make you raise your hand
+^ However, I encourage you to check it out
 ^ And hopefully this will spark your curiosity
 ___
 
 # [fit] Kotlin ♥️ Functions
 
+^ 1st party citizens
+^ functions aren't tied to a class
+^ many useful functions in the stdlib
+
 ___
 
-## Easy to get started, but much more to discover
+## Easy to Get Started
 
-- Getting started is simple
+^ getting started with Kotlin functions is easy
+
 - Can use the IDE conversion tool
 - Can try online
 - Easy to transfer existing knowledge
 
-^ getting started with Kotlin functions is easy
-^ we'll see how quickly you can convert a java method to a kotlin function and you'll be off and running
-
-^ but there is so much more to learn and discover about functions in Kotlin
+^ but much more to discover
 ___
 
-## Functions can be written, modified, and used in a variety of ways
+## Flexible & Convenient
 
-- parameter freedom
-- multiple types
-- variations in scoping
-- variety of modifiers
+^ the features of Kotlin functions make them flexible and convenient
 
-___
+- Parameter & type flexibility
+- Variations in scoping
+- Variety of modifiers
 
-## Functions provide freedom to reimagine how we build for Android
-
-> the flexibility & functionality of functions allow us to break away from traditional java convention and reimagine how we build our projects
+^ we'l explore a variety of ways that these make our lives easier as developers
 
 ___
 
-> We're going to explore function's from their basics variants to more complex iterations
+## Freedom to Reimagine
+
+> The flexibility & functionality of functions allow us to break away from traditional java conventions and reimagine how we build our projects
 
 ___
 
 # Takeaways
 
 - Easy to get started
-- Many ways to write, modify and utilize functions
+- Flexibility in how we write, modify and utilize functions
 - Functions enable us to reimagine how we build projects
+
+^ We're going to explore function's from their basics variants to more complex iterations
 
 ___
 
@@ -61,13 +65,17 @@ ___
 
 ___
 
-> From methods to Functions
+> From Methods to Functions
 
 ^ without further ado, let's kick off this dive into Kotlin functions by looking at some Java code 😀
 
 ___
 
-# simple java method
+# Hello Java Method
+
+^ here we have the Java method that we probably all know
+^ whether you love it or hate it is between you and java
+
 ```java
 void helloFunctions() {
   System.out.println("Yay, Functions");
@@ -77,66 +85,80 @@ void helloFunctions() {
 - name
 - method body
 
-^ here we have the Java method that we probably all know
-^ whether you love it or hate it is between you and java
-
-^ we'll start here though so we can build up our mental model of Kotlin functions with a common starting point
+^ we'll start here so we can build up our mental model of Kotlin functions with a common starting point
 
 ___
 
 # java method converted to kotlin
+
+^ if converted with Android Studio we might get something like this
+
 ```Kotlin
 fun helloFunctions() {
   println("Yay, Functions")
 }
 ```
-^ if converted with Android Studio we might get something like this
-^ not that different right?
 
-- adds the fun keyword
-- same name
+^ not that different right?
+^ but there are a few things to notice
+
+- adds the `fun` keyword
 - no explicit return type
+- same name
+
+^ great.  pretty straightforward. a little more conside version of the familiar java method
 
 ___
 
-# Kotlin can be even more concise
+# Further Simplification
+
+^ for this simple case, we can simplify this function even more
 
 ```kotlin
 fun helloFunctions() = println("Yay, Functions")
 ```
 
-^ for this simple case, we can simplify this function even more
 ^ can ommit the braces alltogether
 ^ this form is known as a single-expression function
+^ we'll look a bit closer at how this works in a bit
 ___
 
 # So What's Left?
 
-seems pretty straightforward, what else is there to know?
+^ functions dont seem that different.
+^ maybe just a bit more concise
+
+Seems pretty straightforward, what else is there to know?
 
 ___
 
 # A Lot
 
+^ thankfully or this would be an awkwardly short talk
+
 ___
 
-# Building On What We Know
+> Let's Build On What We Know
 
 ^ let's build on our example to explore how you can interact with a function
 ___
 
 # Parameter & Type Freedom
 
-- default
-- named
-- return types
-    - when can omit?
-    - when can infer?
-- generic
+- Default parameters
+- Named parameters
+- Return types
+    - when can we omit?
+    - when can we infer?
+- Generic functions
 
+^ let's start by looking at paramter basics
 ___
 
 # Parameters
+
+^ if we couldn't have parameters, functions would be pretty boring
+^ parameters are defined using <name> colon <type>
 
 ```Kotlin
 fun helloFunctions(excitingThing:String) {
@@ -146,8 +168,6 @@ fun helloFunctions(excitingThing:String) {
 helloFunctions("functions")
 // outputs "Yay, functions"
 ```
-
-^ parameters are defined using <name> colon <type>
 
 ___
 
@@ -162,7 +182,6 @@ fun helloFunctions(exclamation:String, excitingThing:String) {
 }
 
 helloFunctions("Yay", "functions")
-
 // outputs "Yay, functions"
 ```
 
@@ -172,7 +191,7 @@ ___
 
 ___
 
-# Default Arguments
+# Default Parameter Values
 
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String = "functions") {
@@ -180,26 +199,77 @@ fun helloFunctions(exclamation:String, excitingThing:String = "functions") {
 }
 
 helloFunctions("Yay", "functions")
+// outputs "Yay, functions"
+
 helloFunctions("Yay")
+// outputs "Yay, functions"
 ```
+___
+
+> Function parameters can have default values, which are used when a corresponding argument is omitted
+
+___
+
+# Default Parameter Values
 
 - allows us the flexibility of overloads without the verbosity of writing them
+- help document the function contract by indicating what "sensible defaults" might be
 
-^ Function parameters can have default values, which are used when a corresponding argument is omitted.
+___
+
+# Default Parameters & Java
+
+Java doesn't have default parameter values
+
+- must specific all parameter values when calling from Java
+- can use `@JvmOverloads` to generate overloads for each parameter
+- generated overloads will used the specified default values
 
 ___
 
 # Named Arguments
 
+Improve readability of function invocations
+How do we know which value is correct?
+
+^ examine the source/documentation?
+
+<br>
+
 ```Kotlin
-helloFunctions(
-  excitingThing = "functions",
-  exclamation = "Horray"
-)
+helloFunctions("functions", "functions")
+```
 
+___
+
+# Named Arguments
+
+Much easier to understand with named arguments
+<br>
+
+```Kotlin
+helloFunctions(exclamation = "yay!", excitingThing = "functions")
+```
+
+___
+
+# Named Arguments
+
+^ looking at our example, notice the names of the parameters
+
+Modify order of passed parameters by using named arguments
+
+```Kotlin
+fun helloFunctions(exclamation:String, excitingThing:String = "functions") {
+  println(exclamation + ", " + excitingThing)
+}
+```
+
+```Kotlin
+helloFunctions("Hooray", "functions")
 helloFunctions("Hooray")
-
-helloFunctions("hooray", excitingThing = "Droidcon Boston")
+helloFunctions(excitingThing = "functions", exclamation = "Hooray")
+// all output "Hooray, functions"
 ```
 ^ notice we've reversed the order in which these are passed
 ^ by providing the name, the correct behavior is achieved
@@ -208,18 +278,45 @@ helloFunctions("hooray", excitingThing = "Droidcon Boston")
 
 ___
 
-# Variable number of arguments
+# Named Arguments
 
-we can define a parameter to accept a variable number of arguments T
+There are limitations to how named & positioned arguments are used
+- once an argument name is specificed, all subsequent arguments must be named as well
+
+___
+
+# Named Arguments
+
+^ this example works fine
+
+```Kotlin
+helloFunctions("hooray", "Droidcon Boston")
+helloFunctions("hooray", excitingThing = "Droidcon Boston")
+// both output "hooray, Droidcon Boston"
+```
+
+^ this example fails to compile
+
+```Kotlin
+helloFunctions(excitingThing = "Droidcon Boston", "hooray")
+// error: Mixing named and positioned arguments not allowed
+```
+___
+
+# Variable Number of Arguments
 
 ^ like in Java
 
-use the `vararg` keyword
-
-the `vararg` param is then treated as an array of type T
+We can define a parameter to accept a variable number of arguments `T`
+- use the `vararg` keyword
+- the `vararg` param is then treated as an array of type T
+- default value must now be an array
 ___
 
-# Variable number of arguments
+# Variable Number of Arguments
+
+^ imagine we want to print multiple exciting things
+^ can mark the 2nd param with `vararg` to accept multiple inputs
 
 ```Kotlin
 fun helloFunctions(exclamation:String, vararg excitingThings:String) {
@@ -229,47 +326,110 @@ fun helloFunctions(exclamation:String, vararg excitingThings:String) {
 }
 
 helloFunctions("yay!", "Droidcon Boston", "Kotlin", "Android")
+// outputs:
+// yay!, Droidcon Boston
+// yay!, Kotlin
+// yay!, Android
 ```
+^ excitingThings is treated as an array or strings, so it can be iterated over
+
 ___
 
-# Variable number of arguments
+# Variable Number of Arguments
 
-typically, a `vararg` parameter will be the last one
+Typically, a `vararg` parameter will be the last one
 
-can use anywhere if
+Can be used in any order if:
 - other parameters are called using named argument syntax
 - last parameter is a function passed outside the parentheses
 
+___
+
+# Variable Number of Arguments
+
+This works great
+
 ```Kotlin
-helloFunctions("Droidcon Boston", "Kotlin", "Android", exlamation="yay!")
+helloFunctions("yay!", "Droidcon Boston", "Kotlin", "Android")
+helloFunctions("Droidcon Boston", "Kotlin", "Android", exlamation = "yay!")
+
+// both output:
+// yay!, Droidcon Boston
+// yay!, Kotlin
+// yay!, Android
 ```
+
+___
+
+# Variable Number of Arguments
+
+This works
+
+^ but because no named arguments are used, the first item becomes the exclamation
+
+```Kotlin
+helloFunctions("Droidcon Boston",  "Kotlin", "Android")
+// output:
+// "Droidcon Boston, Kotlin"
+// "Droidcon Boston, Android"
+
+```
+
+___
+
+# Variable Number of Arguments
+
+This won't compile
+
+```Kotlin
+helloFunctions("Droidcon Boston", exlamation = "yay!", "Kotlin", "Android")
+// error: "no matching function"
+```
+
+^ can't find a match because of the missing of argument types
+
 ___
 
 
-# Variable number of arguments spreading
+# Variable Number of Arguments
 
-Use `spread` operator to pass an existing array of values
+Use "spread" operator to pass an existing array of values
 
 ```Kotlin
 val thingsToBeExcitedAbout = arrayOf("Droidcon Boston", "Kotlin", "Android")
 helloFunctions("yay!", *thingsToBeExcitedAbout)
-helloFunctions("yay!", "coffee", *thingsToBeExcitedAbout)
-```
 
-- can be alone, or with other passed varargs as well
+// output:
+// yay!, Droidcon Boston
+// yay!, Kotlin
+// yay!, Android
+```
 
 ---
 
+# Variable Number of Arguments
+
+"Spreading" can be used alone, or with other passed varargs as well
+
+```Kotlin
+helloFunctions("yay!", "coffee", *thingsToBeExcitedAbout)
+helloFunctions("yay!", *thingsToBeExcitedAbout, "coffee")
+```
+- input array to the vararg parameter is handled in order
+
+^ in first call here coffee will be first, and in the 2nd call it will be last
+
+___
+
 # Return Types
+
+What is the return type?
 
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String="functions") {
   println(exclamation + ", " + excitingThing)
 }
 ```
-
-^ you might have noticed that no return type is specified
-
 ___
 
 > If a function does not return any useful value, its return type is Unit
@@ -293,7 +453,7 @@ ___
 
 # Return A Non-Unit Type
 
-function with block body require explicit return type & call for non-Unit functions
+Functions with block body require explicit return type & call for non-Unit functions
 
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String="functions") : String {
@@ -304,7 +464,7 @@ ___
 
 # Return A Non-Unit Type
 
-can infer return type for single-expression functions
+Can infer return type for single-expression functions
 
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String="functions")
@@ -316,13 +476,19 @@ ___
 
 Like classes, functions may have generic type parameters
 
+^ many of the stdlib functions for collections are generic
+
 ```Kotlin
-fun <T> log(item: T) {
-    // ...
+public inline fun <T> Iterable<T>.filter(predicate: (T) -> Boolean): List<T> {
+    return filterTo(ArrayList<T>(), predicate)
 }
 
-log(Foo())
-log(Goo())
+public fun <T> Iterable<T>.toHashSet(): HashSet<T> {
+    return toCollection(HashSet<T>(mapCapacity(collectionSizeOrDefault(12))))
+}
+
+listOf(2,4,6,8).filter{ ... }
+setOf(2,4,6).toHashSet()
 ```
 
 ___
@@ -337,67 +503,94 @@ ___
 
 ___
 
-# [fit] Variations On A Theme
-
 > Let's explore some variations on how you can create and use functions
 
 ___
 
 # Variations In Scope
 
-- top-level
-- member functions
-- local
+- Top-level
+- Member functions
+- Local
 - CompanionObject
-- extension functions
+- Extension functions
 
 ___
 
 # Top-Level functions
-- not tied to a class
-- defined within a Kotlin file
-- belong to their declared file's package
-- import to use within other packages
-- enable interesting patterns
+
+- Not tied to a class
+- Defined within a Kotlin file
+- Belong to their declared file's package
+- Import to use within other packages
+
+^ enable interesting changes in how we build our apps
 
 ___
 
 # Top-Level Function Patterns
-- no need for stateless classes filled with static methods
-- replace your "Util" or "Helper" classes with functions
+- Replace stateless classes filled with static methods
+- Swap your "Util" or "Helper" classes with functions
 
-^ ex: logger
+^ great for functionality that is widely used
+^ ex: threading helpers, loggers
 ^ possibly even fewer classes/objects to be dependent on
 
 ___
 
 # Top-Level Function Considerations
 
-- not truly removing classes
-- generated as a public static method on a class using a special convention
+- Not truly removing classes
+- Generated as a public static method on a class using a special convention
 - <function's file name>Kt.java
 
 ___
 
 # Top-Level Function Considerations
 
-Within Logging.kt
+__Inside Logging.kt__
+<br>
 
 ```Kotlin
-fun log(error:Throwable) {...}
+package logging
 
+fun log(error:Throwable) {...}
+```
+___
+
+# Top-Level Function Considerations
+
+__Call from Kotlin__
+<br>
+
+```Kotlin
 log(Throwable("oops"))
 ```
 
-Generates
+___
+
+# Top-Level Function Considerations
+
+__Generated Code__
+<br>
 
 ```Java
 public class LoggingKt {
   public static void log(Throwable error) {...}
 }
+```
+___
 
+# Top-Level Function Considerations
+
+__Call from Java__
+<br>
+
+```Java
 LoggingKt.log(new Throwable("oops"))
 ```
+
+^ notice the name of the generated class
 
 ___
 
@@ -405,12 +598,16 @@ ___
 
 Can override the generated class/file name
 
-- add `@file:JvmName(<desired class name>)` to function's file
-- must be before the declared package
+- Add `@file:JvmName(<desired class name>)` to function's file
+- Must be before the declared package
 
 ___
 
 # Top-Level Function Considerations
+
+__Inside Logging.kt__
+<br>
+
 ```Kotlin
 @file:JvmName("LoggingFunctions")
 package logging
@@ -418,42 +615,51 @@ package logging
 fun log(error:Throwable) {...}
 ```
 
+___
+
+# Top-Level Function Considerations
+
+__Call from Java__
+<br>
+
 ```Java
-LoggingFunctions.log(...)
+LoggingFunctions.log(new Throwable("oops"))
 ```
 ___
 
 # Top-Level Function Summary
 
-- function declared in a file outside of any class
-- can remove unneeded helper/util classes
+- Function declared in a file outside of any class
+- Can replace stateless helper/util classes
+- Can override generated class name to improve Java interop
 
 ___
 
 # Member Functions
 
-- function on a class or object
-- like a Java method
+- Function on a class or object
+- Like a Java method
+- Have access to private members of the class or object
 
 ___
 
 # Member Functions
 
 ```Kotlin
-class Demo() {
-    fun goo() { ... }
+class Speaker() {
+    fun giveTalk() { ... }
 }
 
-// create instance of class Demo and calls goo
-Demo().goo()
+// create instance of class Speaker and call giveTalk()
+Speaker().giveTalk()
 ```
 
 ___
 
 # Member Function Considerations
 
-- default arguments can't be changed in overridden methods
-- if overriding a method, you must omit the default values
+- Default arguments can't be changed in overridden methods
+- If overriding a method, you must omit the default values
 
 ___
 
@@ -461,8 +667,8 @@ ___
 
 Functions inside of functions
 
-- can create a function that is scoped to another function
-- useful if your function/method is only ever called from another function
+- Create a function that is scoped to another function
+- Useful if your function is only ever called from another function
 
 ___
 
