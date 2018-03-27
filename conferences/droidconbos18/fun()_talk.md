@@ -2,10 +2,14 @@ footer: @n8ebel #droidconbos
 build-lists: true
 slidenumbers: true
 
+[.hide-footer]
+[.slidenumbers: false]
 
 #[fit] fun() Talk
 
 ## Exploring Kotlin Functions
+
+### @n8ebel
 
 ^ At this point, I think it's safe to say most everybody here has at least heard of Kotlin
 
@@ -674,18 +678,18 @@ ___
 
 # Local Functions
 
-Why would you want this?
-
-- clean code
-- avoids code duplication
-- avoid deep chains of function calls
+- Declare like any other function, just within a function
+- Have access to all params and variables of the enclosing function
 
 ___
 
 # Local Functions
 
-- declare like any other function, just within a function
-- have access to all params and variables of the enclosing function
+Why would you want this?
+
+- Clean code
+- Avoids code duplication
+- Avoid deep chains of function calls
 
 ___
 
@@ -733,37 +737,41 @@ ___
 
 # Local Function Considerations
 
-- local function or private method?
-- is the logic going to be needed outside the current function?
-- does the logic need to be tested in isolation?
-- is the enclosing function still readable?
+- Local function or private method?
+- Is the logic going to be needed outside the current function?
+- Does the logic need to be tested in isolation?
+- Is the enclosing function still readable?
 
 ___
 
 # Companion Objects
 
-- no static method/functions in Kotlin
-- recommended to use top-level functions instead
-- but what if you need access to private members of an object?
+^ if you're not familiar, a companionobject is essentially a singlton inside an enclosing class
+
+^ just in case: a companion object is initialized when the corresponding class is loaded (resolved), matching the semantics of a Java static initializer
+
+- No static method/functions in Kotlin
+- Recommended to use top-level functions instead
+- What if you need access to private members of an object?
 
 ___
 
 # Companion Objects
 
-- want to create a factory method?
-- define a member function on a companion object to gain access to private members/constructors
+- Want to create a factory method?
+- Define a member function on a companion object to gain access to private members/constructors
 
 ___
 
 # Companion Objects
 
 ```Kotlin
-class Foo private constructor(val key:String)
+class Course private constructor(val key:String)
 
 // won't work
 // can't access the private constructor
-fun createFoo(key:String) : Foo {
-    return Foo(key)
+fun createCourse(key:String) : Course {
+    return Course(key)
 }
 ```
 
@@ -772,39 +780,68 @@ ___
 # Companion Objects
 
 ```Kotlin
-class Goo private constructor(val key:String) {
+class Course private constructor(val key:String) {
     companion object {
-        fun createGoo(key:String) : Goo {
-            return Goo(key)
+        fun createCourse(key:String) : Course {
+            return Course(key)
         }
     }
 }
 
 // can then call the factory method
-Goo.createGoo("somekey")
+Course.createCourse("somekey")
 ```
 
 ___
 
-# [fit] Special Cases
+# Companion Object Function Considerations
+
+- syntax from Java is ugly
+
+```Java
+// from Java
+Course.Companion.createCourse("somekey")
+```
 
 ___
 
-# Special Cases
+# Companion Object Function Considerations
+
+```Kotlin
+class Course private constructor(val key:String) {
+    companion object Factory {
+        fun createCourse(key:String) : Course {
+            return Course(key)
+        }
+    }
+}
+```
+
+```Java
+// from Java
+Course.Factory.createCourse("somekey")
+```
+
+___
+
+# [fit] Variations
+
+___
+
+# Variations
 
 - `infix`
 - `extension`
 - higher-order
-- lambdas
 - `inline`
-- anonymous
 
 ___
 
 # infix
 
 - `infix` keyword enables usage of infix notation
-- can omit the dot & parentheses for the function call
+- What is infix notation?
+- Can omit the dot & parentheses for the function call
 
 - ```Kotlin
 "key" to "value"
@@ -816,48 +853,69 @@ ___
 
 # infix
 
-- must be a member function or extension function
+- Must be a member function or extension function
 
 ^ we will look at extension functions shortly
 
-- must take a single, non-varargs, parameter with no default value
+- Must take a single, non-varargs, parameter with no default value
 
 ___
 
 # infix
 
 ```Kotlin
-class User{
-    infix fun addNickname(name:String){...}
+class ConferenceAttendee {
+    infix fun addInterest(name:String){...}
 }
 
 // call the function without dot or parentheses
-val user = User()
-user addNickname "shades"
+val attendee = ConferenceAttendee()
+attendee addInterest "Kotlin"
 ```
 
 ___
 
 # infix
 
-- can provide a very clean, human-readable syntax
-- core building block of custom DSLs
+- Provides a very clean, human-readable syntax
+- Core building block of custom DSLs
+
+___
+
+# infix
+
+```Kotlin
+"hello" should haveSubstring("ell")
+"hello" shouldNot haveSubstring("olleh")
+```
+
+https://github.com/kotlintest/kotlintest
 
 ___
 
 # Extension Functions
 
-- extend the functionality of an existing class
-- use as if it were a member of a class
-- defined outside the class
+- Extend the functionality of an existing class
+- Defined outside the class
+- Used as if they were a member of a class
+
+___
+
+# Why Extension Functions?
+
+- Clean-up or extend classes & apis you don't control
+- Remove helper classes & simplify top-level functions
 
 ___
 
 # Extension Functions
 
-- cleanup or extend classes & apis you don't control
-- remove helper classes & simplify top-level functions
-- can be leveraged for DSLs
+```Kotlin
+// add a new function to the View class
+fun View.isVisible() = visibility == View.VISIBLE
+
+yourView.isVisible()
+```
 
 ___
 
@@ -899,17 +957,29 @@ ___
 
 
 # Extension Function Considerations
-- how are these generated under the hood?
-- how are these called from Java?
+
+- How are these generated under the hood?
+- How are these called from Java?
 
 ___
 
 # Extension Function Considerations
 
-- extension functions are static methods that accept the receiver object as it's first argument
-- like with top-level functions the convention is to use <filename>Kt.<functionName>
+- Generated as static methods that accept the receiver object as it's first argument
+- Default behavior is to use <filename>Kt.<functionName>
 
-- ```Java
+___
+
+# Extension Function Considerations
+
+// ContextExtensions.kt
+
+```Kotlin
+fun Context.showToast(...) { ... }
+```
+
+```Java
+// when called from Java
 ContextExtensionsKt.showToast(context, "Toast!");
 ```
 
@@ -917,17 +987,33 @@ ___
 
 # Higher-Order Functions
 
-- functions that take, or return, other functions
-- can be lambda or function reference
-- many examples in the Kotlin standard library `apply`, `also`, `run`
+- Functions that take, or return, other functions
+- Can be lambda or function reference
+- Many examples in the Kotlin standard library `apply`, `also`, `run`
 
 ___
 
 # Higher-Order Functions
 
-- allow very interesting Patterns
-- can cleanup setup/teardown patterns such as shared prefs
-- very helpful in dsls
+- Enable interesting patterns & conventions
+- Support functional programming
+- Can cleanup setup/teardown patterns such as shared prefs
+
+___
+
+# Higher-Order Functions
+
+```Kotlin
+fun getScoreCalculator(level:Level) {
+  return when (level) {
+    Level.EASY -> { state:ScoreState -> state.score * 10 }
+    Level.HARD -> { state:ScoreState -> state.score * 5 * state.accuracy }
+  }
+}
+```
+
+^ can return functions as well
+^ could be used as a factory to return strategy functions
 
 ___
 
@@ -954,7 +1040,7 @@ ___
 
 # Higher-Order Functions
 
-if the last parameter of a function is a function, you can omit the parentheses
+If the last parameter of a function is a function, you can omit the parentheses
 
 - ```Kotlin
 listOf(2,4,6,8).filter{ number -> number > 5 }
@@ -967,31 +1053,35 @@ ___
 # Higher-Order Functions
 
 ```Kotlin
-fun getScoreCalculator(level:Level) {
-    when (level) {
-        Level.EASY -> { state:ScoreState -> state.score * 10 }
-        Level.HARD -> { state:ScoreState -> state.score * 5 * state.accuracy }
+public inline fun <R> synchronized(lock: Any, block: () -> R): R {
+    monitorEnter(lock)
+    try {
+        return block()
+    }
+    finally {
+        monitorExit(lock)
     }
 }
+
+synchronized(database) {
+  database.prePopulate()
+}
 ```
-
-^ can return functions as well
-^ could be used as a factory to return strategy functions
-
 ___
 
 # Higher-Order Function Performance
 
 > "Using higher-order functions imposes certain runtime penalties"
 
-- extra class created when using lambda
-- if lambda captures variables, extra object created on each call
-- how to solve?
+- Extra class created when using lambda
+- If lambda captures variables, extra object created on each call
+
+^ how to solve?
 
 # inline
 
-- helps solve higher-order function performance hits
-- body of the inlined function is substituted for invocations of the function
+- Helps solve higher-order function performance hits
+- Body of the inlined function is substituted for invocations of the function
 
 ___
 
@@ -1010,8 +1100,7 @@ inline fun <T> synchronized(lock: Lock, action: () -> T): T {
     }
 }
 
-val l = Lock()
-synchronized(l) {...}
+synchronized(Lock()) {...}
 ```
 
 ___
@@ -1019,7 +1108,7 @@ ___
 ## inline
 
 ```Kotlin
-fun foo(l:Lock) {
+fun inlineExample(l:Lock) {
   println("before")
   synchronized(l) {
     println("action")
@@ -1035,7 +1124,7 @@ ___
 With `inline` the generated code is equivalent to this
 
 ```Kotlin
-fun goo(l:Lock) {
+fun inlineExample(l:Lock) {
   println("before")
   lock.lock()
   try {
@@ -1060,34 +1149,16 @@ ___
 
 ___
 
-# Avoiding `if`
+# Fewer Helper Classes
 
-```Kotlin
-if(foo != null) { ...}
-
-foo?.let{}
-```
+- `ContextHelper`, `ViewUtils`
+- Replace with
+    - top-level functions
+    - extension functions
 
 ___
 
-# Avoiding `if`
-
-```Kotlin
-if(game.level == EASY)  { }
-else if (game.level == NORMAL) {}
-else if (game.level == HARD) {}
-
-when(game.level){
-  EASY -> {}
-  NORMAL -> {}
-  HARD -> {}
-}
-```
-___
-
-# Android Reimagined
-
-## Safer Strategies
+# Less Boilerplate
 
 ```Kotlin
 fun doTheThingSafely(theThing:() -> Unit) {
@@ -1098,24 +1169,19 @@ fun doTheThingSafely(theThing:() -> Unit) {
     }
 }
 ```
+___
+
+# Upgrade Our Apis
+
+Can use extensions, default params, etc to cleanup common apis
+
+- Now seeing community supported examples of this
+- Android KTX: https://github.com/android/android-ktx
+- Anko: https://github.com/Kotlin/anko
 
 ___
 
-# Android Reimagined
-
-## Upgrade Our Apis
-
-can use extensions, default params, etc to cleanup common apis
-
-- now seeing community supported examples of this
-- ktx: https://github.com/android/android-ktx
-- anko: https://github.com/Kotlin/anko
-
-___
-
-# Android Reimagined
-
-## Android KTX
+# Android KTX
 
 ^ from the android ktx github page
 
@@ -1161,38 +1227,69 @@ object CustomLogger {
 
 ___
 
-# Android Reimagined
-
-## Fewer Helpers to Pass Around
+# Cleaner Syntax
 
 ```Kotlin
 fun log(msg:String) {...}
+
+inline fun runOnBackgroundThread(action:() -> Unit) { ... }
 ```
 
-- more fluent syntax
-- doesn't require mocking when testing
-- avoids extra class
-- encourages configuration
+- More fluent syntax
+- Simplify test mocking
+- Avoids extra classes
 
 ___
 
-# Android Reimagined
-## Building a DSL
+# DSLs
 
-???  dsl for parsing things from the Contentful sdk ???
+```Kotlin
+val articleBuilder = ArticleBuilder()
+  articleBuilder {
+    title = "This is the title"
+    addParagraph {
+      body = "This is the first paragraph body"
+    }
+    addParagraph {
+      body = "This is the first paragraph body"
+      imageUrl = "https://path/to/url"
+    }
+  }
+```
+
+- https://proandroiddev.com/kotlin-dsl-everywhere-de2994ef3eb0
+
 ___
 
-# In Closing
+# DSLs
+
+DSL examples
+
+- https://github.com/gradle/kotlin-dsl
+- https://github.com/kotlintest/kotlintest
+- https://github.com/Kotlin/anko/wiki/Anko-Layouts
+- https://kotlinlang.org/docs/reference/type-safe-builders.html
+
+___
 
 > Kotlin functions provide flexibility & freedom in how you build your apps
 
 ___
 
-# In Closing
+# Go, and Have fun()
 
 - Easy to get started
 - Can build your understanding and usage of functions over time
 - Enables you to rethink how you build your applications
+
+___
+
+# Ready to Learn More?
+
+- https://engineering.udacity.com
+- https://n8ebel.com/tag/kotlin
+<br>
+- Udacity Course: https://www.udacity.com/course/kotlin-for-android-developers--ud888
 
 ___
 
@@ -1203,11 +1300,12 @@ ___
 # Let's Connect
 
 ```kotlin
-with("n8ebel").apply{
+with("n8ebel").apply {
   Twitter
   .com
   Medium
   Instagram
   Facebook
+  GitHub
 }
 ```
