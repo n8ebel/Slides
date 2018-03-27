@@ -31,7 +31,7 @@ ___
 ^ getting started with Kotlin functions is easy
 
 - Can use the IDE conversion tool
-- Can try online
+- Can try online (https://try.kotlinlang.org)
 - Easy to transfer existing knowledge
 
 ^ but much more to discover
@@ -52,14 +52,6 @@ ___
 ## Freedom to Reimagine
 
 > The flexibility & functionality of functions allow us to break away from traditional java conventions and reimagine how we build our projects
-
-___
-
-# Takeaways
-
-- Easy to get started
-- Flexibility in how we write, modify and utilize functions
-- Functions enable us to reimagine how we build projects
 
 ^ We're going to explore function's from their basics variants to more complex iterations
 
@@ -234,7 +226,6 @@ ___
 # Named Arguments
 
 Improve readability of function invocations
-How do we know which value is correct?
 
 ^ examine the source/documentation?
 
@@ -243,6 +234,8 @@ How do we know which value is correct?
 ```Kotlin
 helloFunctions("functions", "functions")
 ```
+
+- How do we know which value is correct?
 
 ___
 
@@ -796,7 +789,7 @@ ___
 
 # Companion Object Function Considerations
 
-- syntax from Java is ugly
+Java usage is ugly
 
 ```Java
 // from Java
@@ -821,6 +814,10 @@ class Course private constructor(val key:String) {
 // from Java
 Course.Factory.createCourse("somekey")
 ```
+
+___
+
+> different scopes for different use cases
 
 ___
 
@@ -1041,8 +1038,9 @@ ___
 # Higher-Order Functions
 
 If the last parameter of a function is a function, you can omit the parentheses
+<br>
 
-- ```Kotlin
+```Kotlin
 listOf(2,4,6,8).filter{ number -> number > 5 }
 ```
 
@@ -1063,6 +1061,7 @@ public inline fun <R> synchronized(lock: Any, block: () -> R): R {
     }
 }
 
+// call from Kotlin
 synchronized(database) {
   database.prePopulate()
 }
@@ -1077,6 +1076,8 @@ ___
 - If lambda captures variables, extra object created on each call
 
 ^ how to solve?
+
+___
 
 # inline
 
@@ -1100,6 +1101,7 @@ inline fun <T> synchronized(lock: Lock, action: () -> T): T {
     }
 }
 
+// call from Kotlin
 synchronized(Lock()) {...}
 ```
 
@@ -1108,6 +1110,7 @@ ___
 ## inline
 
 ```Kotlin
+// sample usage
 fun inlineExample(l:Lock) {
   println("before")
   synchronized(l) {
@@ -1124,6 +1127,7 @@ ___
 With `inline` the generated code is equivalent to this
 
 ```Kotlin
+// resulting code
 fun inlineExample(l:Lock) {
   println("before")
   lock.lock()
@@ -1196,34 +1200,8 @@ sharedPreferences.edit {
   putBoolean("isLessBoilerplate", true)
 }
 ```
+
 ^ notice we dont have to call edit() or apply() anymore
-
-
-# Android Reimagined
-
-## Fewer Helpers to Pass Around
-
-Can utilize top-level functions for globally available actions such as logging
-
-- remove direct dependencies that must be shared
-- encourages configuration
-- can have nice testing benefits
-
-___
-
-# Android Reimagined
-
-## Fewer Helpers to Pass Around
-
-```Kotlin
-object CustomLogger {
-  fun log(msg:String) {...}
-}
-```
-
-- traditional syntax
-- requires mocking when testing
-- extra class & nesting
 
 ___
 
@@ -1290,6 +1268,7 @@ ___
 - https://n8ebel.com/tag/kotlin
 <br>
 - Udacity Course: https://www.udacity.com/course/kotlin-for-android-developers--ud888
+- Kotlin In Action
 
 ___
 
@@ -1297,7 +1276,7 @@ ___
 
 ___
 
-# Let's Connect
+# Let's Continue the Discussion
 
 ```kotlin
 with("n8ebel").apply {
