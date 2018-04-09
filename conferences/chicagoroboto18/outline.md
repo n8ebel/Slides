@@ -1,43 +1,20 @@
-footer: @n8ebel
-slidenumbers: true
+# Outline
 
-# Tips From the Time Machine
-<br>
-### Things I Wish I Had Known When Starting a Career as an Android dev
+# Intro
 
----
-
-### Things ~~I~~ (We) Wish ~~I~~ (We) Had Known When Starting a Career as an Android dev
-
-___
-
-> Finding The First Job
-
-___
-
-# The Job Hunt
+# Finding that first job
 - what companies to target?
 - do i meet the requirements?
 - how to stand out?
 
-___
 
-> You got the job, now what?
-
-___
-
-# Handling Your First Role
+# You got the job, now what?
 - what are the expectations in the role?
 - hello imposter syndrome
 - how do i name this? where do i put this? how do i stle this?
 - ask questions
 - critically evaluate everything
 
-___
-
-> Ramping Up
-
-___
 
 # Hit your stride
 - how are they so productive?
@@ -50,12 +27,6 @@ ___
 - planning & requirements. proper scoping
 - diving into this like product planning, user retention, etc
 
-___
-
-> Be In the Know
-
-___
-
 # Stay Up to Date
 - things change fast
     - tools, libs, ides, languages, apis, devices
@@ -63,50 +34,21 @@ ___
 - wont know it all
 - learning the basics is both time effective and enables longterm learning
 
-___
-
-> Keep Perspective
-
-___
-
 # Noise
 - don't get too caught up in x vs y
     - fragment vs custom view
     - enums yes or no?
-    # Noise
-    - don't get too caught up in x vs y
-        - fragment vs custom view
-        - enums yes or no?
 
-___
-
-> Blazing Your Trail
-
-___
-
-# Building Your Career
+# Blazing your Trail
 now that you're getting comfortable in your day to day work...
 - many paths to build your ideal career
 - 9-5 ?
 
-___
-
-> This Is Hard
-
-___
-
+# This is hard
 Here's the condensed set of challenges from my question to the interwebs
 ...
 
-___
-
-challenges go here
-
-___
-
-> You're Not Alone
-
-___
+When you see this, you might be reminded just how much is out there...
 
 # You Are Not Alone
 - engaging with local and online communities
@@ -116,16 +58,10 @@ ___
 - great way to stay up to date, to learn
 - validation and confirmation that everyone struggles
 
-___
+# Key Takeaways
+- nobody knows it all
 
-# Takeaways
-
-1.
-2.
-3.
-
-___
-
+# Outro
 if i could go back in time, there are so many things i could share with myself.  so many things to be learned and experienced
 
 the catch is that you can't learn it all at once.
@@ -134,58 +70,4 @@ in fact it takes time.  a lot of time.  so much time that we will never know it 
 
 so the single thing ...
 
-___
-
-# Udacity
-
-- thanks for sending me
-- great source for training
-- we are hiring
-
-___
-
-# Thanks For Sharing
-
-Estefania C
-Rajanikant Deshmukh @_alpharion_
-James Henderson @JRayHenny
-Jake Wharton @JakeWharton
-Andreas Ioannou @xnorcode
-Rhex Gomez @rhexgomez
-Jonathan Maltz @maltzj
-Jordan Carlyon @JordanCarlyon
-Chris @kodi
-
-___
-
-
-Sam Edwards @HandstandSam
-Zarah Dominguez @zarahjutz
-Chiu-Ki Chan @chiuki
-Miquel Beltran @Miqubel
-Mike Wolfson @mikewolfson
-Adam McNeilly @AdamMc331
-Annyce Davis @brwngrldev
-Eric Maxwell @emmax
-Ryan Harter @rharter
-Giorgio Natili @giorgionatili
-Rebecca Franks @riggaroo
-
-___
-
-Orhan Obut @orhanobut
-Anita Singh @anitas3791
-Aman @multivitaman
-Divya Jain @divyajain2405
-Mark O'Sullivan @MarkOSullivan94
-Rob Drimmie @RobDrimmie
-Kaan Mamikoglu @kaanmamikoglu
-Nnabueze @_NezSpencer
-James Coggan @mad_team
-Craig Russell @trionkidnapper
-Anthony @AnthonyOng03
-
-___
-
-# Thanks
-## @n8ebel
+# Udacity Plug
