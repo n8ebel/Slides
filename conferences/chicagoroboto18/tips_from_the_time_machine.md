@@ -21,6 +21,10 @@ ___
 
 ___
 
+> What advice would we give ourselves and others?
+
+___
+
 # To the Time Machine
 
 ^ let's look a few periods during an early career in androiddev
@@ -43,14 +47,23 @@ ___
 ___
 
 # What Companies Will You Target?
+- Find & focus on your interests
+- Look beyond the "Big 4"
+- Look for opportunities to learn & grow
 
 ___
 
 # Are You Qualified?
+- Don't disqualify yourself
+- Requirements are often flexible
+- There are many ways to highlight yourself
 
 ___
 
 # How Will You Stand Out?
+- You don't need to do it all
+- Experiences outside of Android are still relevant
+- Highlight your strengths, whatever those are
 
 ___
 
@@ -61,9 +74,10 @@ ___
 # Starting Your First Role
 - Where is your desk?
 - What is expected of you?
-- How do you name your classes? How do you style things?
+- How does your team build software?
 - Where and how are bugs tracked?
 - What's a sprint? Isn't scrum for rugby players?
+- How do you communicate effectively across an organization?
 
 ___
 
@@ -83,10 +97,20 @@ ___
 
 ___
 
+# Are you asking those questions?
+
 more pictures can go here
 https://twitter.com/orhanobut/status/982970862683832325
 https://twitter.com/xnorcode/status/982892026051035136
 https://twitter.com/trionkidnapper/status/983103592327536640
+
+___
+
+# Are you asking those questions?
+
+- Remember they already hired you and think you're worth investing in
+- Seeking out those answers is a fast track towards growth
+- You are enough
 
 ___
 
@@ -95,36 +119,62 @@ ___
 ___
 
 # Hitting Your Stride
+## How can you start to hone your craft?
 
-- How can you start to hone your craft?
-- Productivity Boosters
-- Improved Planning
-- Increased Product Sense
+- How Are Others So Productive?
+- How Do Others Always Complete Their Work On Time?
+- How Would You Build X?
 
 ___
 
 # How Are Others So Productive?
     - ide, emulators, other tools
     - shortcuts
-    - architectures/patterns
-    - libraries
+    - architectures/patterns/libraries
     - documentation, source code
     - learning to search properly
+
+^ there are so many useful productivity boosters, but you wont know if you don't ask and explore
+
+^ 3rd party libraries aren't a sign of defeat
+
+^ learning to search effectively is a skill
+
+^ balance the Google
 
 ___
 
 # How Do Others Always Complete Their Work On Time?
-- planning & requirements. proper scoping
+- They plan for success
+- Requirements gathering
+- Planning & scoping
 
-# How Would You Build This?
-- product contributions
-    - product planning, user retention, user interactions etc
-- engineering discussions
+^ don't remain uncertain on requirements for the fear of looking silly or uninformed
+
+^ be realistic about what you can take on
+^ be assertive in your planning
+^ don't bite off more than you can chew
+
+^ if you have leftover time, you can use it to learn
+
+___
+
+# How Would You Build X?
+
+- How do you think this feature should work?
+- What would you recommend?
+- How would you build X?
+
+^ product contributions
+^ product planning, user retention, user interactions etc
+^ engineering discussions
 
 ___
 
 > Things Are Looking Up
 
+^ for me, these areas of growth were joined with other conerns as well
+^ as we step out of our comfort zone, we open ourselves up to greater visibility
 ___
 
 # Have You Been Faking It This Whole Time?
@@ -154,6 +204,8 @@ ___
 
 - It's common
 - You're not alone
+- Talk about it
+- Seek to understand
 
 ___
 
@@ -193,9 +245,27 @@ ___
 
 ___
 
-> Through It All, Maintain Perspective
+> Blazing Your Trail
 
 ___
+
+# Blazing Your Trail
+
+^ now that you're getting comfortable in your day to day work...
+
+- many paths to build your ideal career
+- you don't have to do it all
+- know yourself. what are your goals?
+
+^ understand your true motivations
+^ be honest about yourself and what makes you happy
+^ then find ways to incorporate more of that into your life
+
+^ don't overwork (unless that truly makes you the most happy..but it probably doesn't)
+
+___
+
+> Through It All, Maintain Perspective
 
 # Maintain Perspective
 - your job is not who you are
@@ -210,22 +280,6 @@ ___
 
 - critically evaluate anything & everything
     - companies, devs, teams, tools, libs, etc...
-
-___
-
-> Blazing Your Trail
-
-___
-
-# Blazing Your Trail
-
-^ now that you're getting comfortable in your day to day work...
-
-- many paths to build your ideal career
-- you don't have to do it all
-- know yourself
-- what are your goals
-- 9-5 ?
 
 ___
 
@@ -246,34 +300,44 @@ ___
 # You Are Not Alone
 we are in this together, but not the same
 
+- the lone wolf goes only so far
+
 - engaging with local and online communities
 - build a community within your org
-- the lone wolf goes only so far
 - as you learn from others, you can help others as well
 - blogging, sharing, mentoring great way to stay up to date, to learn
 - validation and confirmation that everyone struggles
 
 ___
 
-if i could go back in time, there are so many things i could share with myself.  so many things to be learned and experienced
+> **_So what would I tell myself?_**
 
-the catch is that you can't learn it all at once.
+^ if i could go back in time, there are so many things i could share with myself.  so many things to be learned and experienced
 
-in fact it takes time.  a lot of time.  so much time that we will never know it all
+^ the catch is that you can't learn it all at once.
 
-...
+^ in fact it takes time.  a lot of time.  so much time that we will never know it all
 
 ___
 
 # Takeaways
 
-1. everyone feels overwhelmed at times
-2. you wont know everything
-3. there's no "one size fits all" approach
+1. Don't tie "lines of code" to happiness
+2. Everyone feels overwhelmed at times
+3. You wont know everything
+4. There's no "one size fits all" approach
 
 ___
 
-> **_Do What Makes You Happy_**
+> **_Find what makes you happy_**
+
+___
+
+> **_Find what makes you happy; follow that where it leads_**
+
+___
+
+> **_Find what makes you happy; follow that where it leads; and enjoy the journey_**
 
 ___
 
