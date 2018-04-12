@@ -31,9 +31,8 @@ ___
 
 ___
 
-[.build-lists: false]
 # Where's the technical filling?
-- *Not As Important As It Seems*
+- *Not As Important As It Always Seems*
 
 ^ over the course of a career though, i feel more impact lies elsewhere
 
@@ -56,7 +55,19 @@ ___
 
 ___
 
+> *"do you have what it takes?"*
+
+^ we immediately start comparing outselves
+
+^ arbitrary standards
+
+^ doubt skills
+
+^ added pressure
+___
+
 # Finding Your First Job
+
 - Define your goals
 - What is your ideal self?  Your hobbies?  Your interests?
 - *Don't chase a resume checkmark*
@@ -70,6 +81,23 @@ ___
 ___
 
 # Finding Your First Job
+- Don't disqualify yourself
+- Experience comes in many forms
+- Highlight what you have
+
+^ dont disqualify
+
+^ requirements are flexible
+
+^ show yourself a little compassion
+
+^ don't discount your experience
+
+^ have the courage to show exactly who you are and why you are a great fit
+
+___
+
+# Finding Your First Job
 - Honestly evaluate companies and whether they serve in reaching those goals
 - Know why you are interviewing at a company
 - *Something beyond "it's a job" is preferable*
@@ -79,26 +107,14 @@ ___
 ^ why this company?
 ___
 
-# Finding Your First Job
-- Don't disqualify yourself
-- Requirements are flexible
-- Experience comes in many forms
-- Highlight what you have
-
-^ dont disqualify
-
-^ flexible requirements
-
-^ show yourself a little compassion
-
-^ don't discount your experience
-
-^ have the courage to show exactly who you are and why you are a great fit
-___
-
 > **_Starting Your First Job_**
 
 ___
+
+> *"do you know enough?"*
+
+___
+
 [.build-lists: false]
 
 # Starting Your First Job
@@ -129,10 +145,11 @@ ___
 ___
 
 # So many questions
-- Having many, many questions is perfectly normal
-- That is exactly where you're supposed to be
+- Questions are perfectly normal
 - You don't have to know everything
 - Be open & honest about what you do know
+
+^ That is exactly where you're supposed to be
 
 ^ embrace your imperfections
 
@@ -173,34 +190,11 @@ ___
 
 ___
 
-> **_Imposter Syndrome_**
-
-___
-
-# Imposter Syndrome
-
-> **_a pervasive pattern of dismissing accomplishments and believing that their success would disappear once others discovered the awful secret that they were, in fact, “impostors.”_** [^2]
-
-[^2]: [https://impostorsyndrome.com/valerie-young/](https://impostorsyndrome.com/valerie-young/)
-
-___
-
-![150%](images/imposter.png)
-
-___
-
-# Imposter Syndrome
-
-- You're not alone
-- Seek to understand
-- Talk about it
-
-^ compassion, courage, connection
-^ learning to recognize and mitigate this will free you to more fully explore your career paths
-
-___
-
 > **_Building Your Career_**
+
+___
+
+> *"are you doing enough?"*
 
 ___
 
@@ -254,6 +248,36 @@ ___
 ^ Here's a condensed set of challenges from my question to the interwebs
 
 ![100%](images/this_is_hard.png)
+
+^ if you start to question yourself
+
+^ that's normal
+
+___
+
+> **_Imposter Syndrome_**
+
+___
+
+# Imposter Syndrome
+
+> **_a pervasive pattern of dismissing accomplishments and believing that their success would disappear once others discovered the awful secret that they were, in fact, “impostors.”_** [^2]
+
+[^2]: [https://impostorsyndrome.com/valerie-young/](https://impostorsyndrome.com/valerie-young/)
+
+___
+
+![150%](images/imposter.png)
+
+___
+
+# Imposter Syndrome
+
+- Seek to understand
+- You're not alone
+
+^ compassion, courage, connection
+^ learning to recognize and mitigate this will free you to more fully explore your career paths
 
 ___
 
@@ -365,11 +389,13 @@ Akshay → `@avdave83`
 
 ___
 
+[.build-lists: false]
 # Udacity
 
 - Great source of information & training
 - Interested in developing Android courses?
 - We are hiring!
+- https://www.udacity.com/jobs#learning-products
 
 ___
 
