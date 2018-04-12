@@ -4,24 +4,24 @@ slidenumbers: true
 [.hide-footer]
 [.slidenumbers: false]
 
-# Tips From the Time Machine
+# __Tips From the Time Machine__
 <br>
-## Things I Wish I Had Known When Starting a Career as an Android dev
+### __Things I Wish I Had Known When Starting a Career as an Android dev__
 <br>
-### @n8ebel
+### __@n8ebel__
 
 ---
 
-> What advice would I give myself?
+> **_What advice would I give myself?_**
 
 ^ but after a lot of great input from the community i felt i needed to update the title
 ___
 
-### Things ~~I~~ (We) Wish ~~I~~ (We) Had Known When Starting a Career as an Android dev
+### __Things ~~I~~ (We) Wish ~~I~~ (We) Had Known When Starting a Career as an Android dev__
 
 ___
 
-> What advice would we give ourselves and others?
+> **_What advice would we give ourselves?_**
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 ___
 
-> How will you find your first Android job?
+> **_Finding Your First Job_**
 
 ___
 
@@ -67,7 +67,11 @@ ___
 
 ___
 
-> You got the job... everything is good now, right?
+> **_Growing into your first role_**
+
+___
+
+## **You got the job... everything is good now, right?**
 
 ___
 
@@ -81,7 +85,7 @@ ___
 
 ___
 
-> So many questions
+## **So Many Questions**
 
 ___
 
@@ -114,7 +118,7 @@ ___
 
 ___
 
-> Hitting Your Stride
+## **Hitting Your Stride**
 
 ___
 
@@ -159,19 +163,7 @@ ___
 
 ___
 
-# How Would You Build X?
-
-- How do you think this feature should work?
-- What would you recommend?
-- How would you build X?
-
-^ product contributions
-^ product planning, user retention, user interactions etc
-^ engineering discussions
-
-___
-
-> Things Are Looking Up
+## **Things Are Looking Up**
 
 ^ for me, these areas of growth were joined with other conerns as well
 ^ as we step out of our comfort zone, we open ourselves up to greater visibility
@@ -184,7 +176,7 @@ ___
 
 ___
 
-> Hello Imposter Syndrome
+> **_Hello Imposter Syndrome_**
 
 ___
 
@@ -209,7 +201,7 @@ ___
 
 ___
 
-> Running To Stand Still
+## **Running To Stand Still**
 
 ___
 
@@ -245,7 +237,7 @@ ___
 
 ___
 
-> Blazing Your Trail
+> **_Building Your Career_**
 
 ___
 
@@ -255,17 +247,19 @@ ___
 
 - many paths to build your ideal career
 - you don't have to do it all
+
+^ don't overwork (unless that truly makes you the most happy..but it probably doesn't)
+
+___
+
+# What Are Your Goals?
 - know yourself. what are your goals?
 
 ^ understand your true motivations
 ^ be honest about yourself and what makes you happy
 ^ then find ways to incorporate more of that into your life
 
-^ don't overwork (unless that truly makes you the most happy..but it probably doesn't)
-
 ___
-
-> Through It All, Maintain Perspective
 
 # Maintain Perspective
 - your job is not who you are
@@ -283,7 +277,7 @@ ___
 
 ___
 
-> This Is Hard
+> **_This Is Hard_**
 
 ___
 
@@ -293,7 +287,7 @@ ___
 
 ___
 
-> __You Are Not Alone__
+## **You Are Not Alone**
 
 ___
 
@@ -323,74 +317,90 @@ ___
 # Takeaways
 
 1. Don't tie "lines of code" to happiness
+
+^ or projects, or meetups, or blog posts, etc
+
 2. Everyone feels overwhelmed at times
 3. You wont know everything
 4. There's no "one size fits all" approach
 
 ___
 
-> **_Find what makes you happy_**
+> **_Find what truly makes you happy_**
 
 ___
 
-> **_Find what makes you happy; follow that where it leads_**
+> **_Find what truly makes you happy; follow that where it leads_**
 
 ___
 
-> **_Find what makes you happy; follow that where it leads; and enjoy the journey_**
+> **_Find what truly makes you happy; follow that where it leads; and embrace the journey_**
 
 ___
 
-# Udacity
-
-- thanks for sending me
-- great source for training
-- we are hiring
+## **Thanks For Sharing**
 
 ___
 
 # Thanks For Sharing
 
-Estefania C
-Rajanikant Deshmukh @_alpharion_
-James Henderson @JRayHenny
-Jake Wharton @JakeWharton
-Andreas Ioannou @xnorcode
-Rhex Gomez @rhexgomez
-Jonathan Maltz @maltzj
-Jordan Carlyon @JordanCarlyon
-Chris @kodi
+Rajanikant Deshmukh → `@_alpharion_`
+James Henderson → `@JRayHenny`
+Jake Wharton → `@JakeWharton`
+Andreas Ioannou → `@xnorcode`
+Rhex Gomez → `@rhexgomez`
+Jonathan Maltz → `@maltzj`
+Jordan Carlyon → `@JordanCarlyon`
+Chris → `@kodi`
 
 ___
 
+# Thanks For Sharing
 
-Sam Edwards @HandstandSam
-Zarah Dominguez @zarahjutz
-Chiu-Ki Chan @chiuki
-Miquel Beltran @Miqubel
-Mike Wolfson @mikewolfson
-Adam McNeilly @AdamMc331
-Annyce Davis @brwngrldev
-Eric Maxwell @emmax
-Ryan Harter @rharter
-Giorgio Natili @giorgionatili
-Rebecca Franks @riggaroo
+Sam Edwards → `@HandstandSam`
+Zarah Dominguez → `@zarahjutz`
+Chiu-Ki Chan → `@chiuki`
+Miquel Beltran → `@Miqubel`
+Mike Wolfson → `@mikewolfson`
+Adam McNeilly → `@AdamMc331`
+Annyce Davis → `@brwngrldev`
+Eric Maxwell → `@emmax`
+Ryan Harter → `@rharter`
 
 ___
 
-Orhan Obut @orhanobut
-Anita Singh @anitas3791
-Aman @multivitaman
-Divya Jain @divyajain2405
-Mark O'Sullivan @MarkOSullivan94
-Rob Drimmie @RobDrimmie
-Kaan Mamikoglu @kaanmamikoglu
-Nnabueze @_NezSpencer
-James Coggan @mad_team
-Craig Russell @trionkidnapper
-Anthony @AnthonyOng03
-Estefania Cassingena Navone @Estefania_Cass
-Bradley Jewell @BradleyJewell
+# Thanks For Sharing
+
+Giorgio Natili → `@giorgionatili`
+Rebecca Franks → `@riggaroo`
+Orhan Obut → `@orhanobut`
+Anita Singh → `@anitas3791`
+Aman → `@multivitaman`
+Divya Jain → `@divyajain2405`
+Mark O'Sullivan → `@MarkOSullivan94`
+Rob Drimmie → `@RobDrimmie`
+Kaan Mamikoglu → `@kaanmamikoglu`
+
+___
+
+# Thanks For Sharing
+
+Nnabueze → `@_NezSpencer`
+James Coggan → `@mad_team`
+Craig Russell → `@trionkidnapper`
+Britt Barak → `@BrittBarak`
+Anthony → `@AnthonyOng03`
+Estefania Cassingena Navone → `@Estefania_Cass`
+Bradley Jewell → `@BradleyJewell`
+Akshay → `@avdave83` 
+
+___
+
+# Udacity
+
+- Great source of information & training
+- Interested in developing Android courses?
+- We are hiring!
 
 ___
 
