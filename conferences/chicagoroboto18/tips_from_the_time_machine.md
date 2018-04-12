@@ -80,8 +80,9 @@ ___
 - What is expected of you?
 - How does your team build software?
 - Where and how are bugs tracked?
-- What's a sprint? Isn't scrum for rugby players?
-- How do you communicate effectively across an organization?
+- What's a sprint? What's a scrum?
+- Where's the code?  How is it structured?
+- Where is the coffee machine?
 
 ___
 
@@ -392,7 +393,7 @@ Britt Barak → `@BrittBarak`
 Anthony → `@AnthonyOng03`
 Estefania Cassingena Navone → `@Estefania_Cass`
 Bradley Jewell → `@BradleyJewell`
-Akshay → `@avdave83` 
+Akshay → `@avdave83`
 
 ___
 
