@@ -1,4 +1,5 @@
 https://twitter.com/n8ebel?lang=en
+https://www.linkedin.com/in/n8ebel/
 
 ## Bio
 Nate is an Android developer working on mobile apps at Udacity who believes in lifelong education and helping others do the same.
