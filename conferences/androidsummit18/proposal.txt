@@ -1,0 +1,1 @@
+In this talk we’ll bridge the gap from Java to Kotlin. You’ll learn what function types are available, where to best use each type, how they reduce boilerplate and transform how you build your apps, and finally how you can take advantage of all these great Kotlin functions from your Java code as well.
