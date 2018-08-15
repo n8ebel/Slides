@@ -20,9 +20,25 @@ ___
 
 > ♥️ == Kotlin + Functions
 
-^ 1st party citizens
+___
+
+# ♥️ == Kotlin + Functions
+
+- Free functions
+- Higher-order functions
+- Rich `stdlib`
+
 ^ functions aren't strictly tied to a class or object
+___
+
+# ♥️ == Kotlin + Functions
+
 ^ many useful functions in the stdlib
+
+- `arrayOf()`, `listOf()`
+- `measureTimeMillis { doSomething() }`
+- `orEmpty()`
+- `forEach()`, `groupBy()`
 
 ___
 
@@ -31,6 +47,12 @@ Functions in Kotlin:
 - Easy to get started
 - Flexible & Convenient
 - Enable Freedom to Reimagine
+
+^ We're going to explore function's from their basics variants to more complex iterations
+
+___
+
+> Easy to Get Started
 
 ___
 
@@ -43,29 +65,6 @@ ___
 - Easy to transfer existing knowledge
 
 ^ but much more to discover
-___
-
-## Flexible & Convenient
-
-^ the features of Kotlin functions make them flexible and convenient
-
-- Parameter & type flexibility
-- Variations in scoping
-- Variety of modifiers
-
-^ we'll explore a variety of ways that these make our lives easier as developers
-
-___
-
-## Freedom to Reimagine
-
-> The flexibility & functionality of functions allow us to break away from traditional java conventions and reimagine how we build our projects
-
-^ We're going to explore function's from their basics variants to more complex iterations
-___
-
-> Easy to Get Started
-
 ___
 
 # [fit] From Java to Kotlin
@@ -143,6 +142,18 @@ ___
 ^ so what's left?
 ^ thankfully or this would be an awkwardly short talk
 ^ let's build on our example to explore how you can interact with a function
+___
+
+## Flexible & Convenient
+
+^ the features of Kotlin functions make them flexible and convenient
+
+- Parameter & type flexibility
+- Variations in scoping
+- Variety of modifiers
+
+^ we'll explore a variety of ways that these make our lives easier as developers
+
 ___
 
 # Parameter & Type Freedom
@@ -1316,6 +1327,14 @@ ___
 
 ___
 
+## Freedom to Reimagine
+
+> The flexibility & functionality of functions allow us to break away from traditional java conventions and reimagine how we build our projects
+
+^ We're going to explore function's from their basics variants to more complex iterations
+
+___
+
 # Fewer Helper Classes
 
 - `ContextHelper`, `ViewUtils`
@@ -1412,7 +1431,31 @@ ___
 
 # Useful Collection Functions
 
-<examples here>
+```Kotlin
+// easily calculate sum from collection
+val totalDownloadSize = downloadRecords.sumBy { it.downloadSize }
+
+// sort all DownloadRecords based on download time
+val sortedDownloadEntities = downloadRecords.sortedByDescending { record ->
+  record.downloadTime
+}
+```
+
+___
+
+# Useful Collection Functions
+
+```Kotlin
+// return map with all DownloadRecords mapped to their parent enrollmentKey
+val entitiesGroupedByEnrollmentKey = downloadRecords.groupBy { record ->
+  record.enrollmentKey
+}
+
+// ensure we have a non-null collection and map all records to view models
+val viewModels = inputRecords.orEmpty().map { record ->
+  createViewModel(record)
+}
+```
 
 ___
 
@@ -1426,7 +1469,14 @@ ___
 
 # Useful String Functions
 
-<examples here>
+```Kotlin
+if(!url.isNullOrEmpty()) {
+  loadData(url)
+}
+
+
+viewModel.body = model.description.orEmpty()
+```
 
 ___
 
