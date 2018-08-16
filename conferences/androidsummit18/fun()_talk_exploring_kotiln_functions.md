@@ -1,5 +1,4 @@
 footer: @n8ebel #androidsummit
-build-lists: true
 slidenumbers: true
 
 [.hide-footer]
@@ -21,6 +20,7 @@ ___
 > ♥️ == Kotlin + Functions
 
 ___
+[.build-lists: true]
 
 # ♥️ == Kotlin + Functions
 
@@ -76,7 +76,7 @@ ___
 # Hello Java Method
 
 ^ here we have the Java method that we probably all know
-^ whether you love it or hate it is between you and java
+^ return type, name, method body
 
 ```java
 class Greeter {
@@ -94,6 +94,9 @@ ___
 # Java Method Converted to Kotlin
 
 ^ if converted with Android Studio we might get something like this
+^ not that different right?
+^ but there are a few things to notice
+^ great.  pretty straightforward. a little more conside version of the familiar java method
 
 ```Kotlin
 class Greeter {
@@ -103,13 +106,8 @@ class Greeter {
 }
 ```
 
-^ not that different right?
-^ but there are a few things to notice
-
 - adds the `fun` keyword
 - no explicit return type
-
-^ great.  pretty straightforward. a little more conside version of the familiar java method
 
 ___
 
@@ -168,7 +166,7 @@ ___
 
 ___
 
-# [fit] Default Parameters
+# [fit] Parameter Basics
 
 ___
 
@@ -203,7 +201,14 @@ helloFunctions("Yay", "functions")
 ```
 ___
 
+# [fit] Default Parameters
+
+___
+
 # Default Parameters
+
+^ notice that "excitingThing" ...
+^ now, when we invoke the function we can omit the second argument
 
 ```Kotlin
 fun helloFunctions(exclamation:String, excitingThing:String = "functions") {
@@ -235,7 +240,7 @@ ___
 # Default Parameters & Java
 
 - Java doesn't have default parameter values
-- Must specify all parameter values when calling from Java
+- must specify all parameter values when calling from Java
 
 ___
 
@@ -588,7 +593,7 @@ ___
 - Belong to their declared file's package
 - Import to use within other packages
 
-^ enable interesting changes in how we build our apps
+^ we can have free functions that aren't scoped to any class or object
 
 ___
 
@@ -1013,6 +1018,7 @@ class ConferenceAttendee {
 
 // call the function without dot or parentheses
 val attendee = ConferenceAttendee()
+attendee.addInterest("Kotlin")
 attendee addInterest "Kotlin"
 ```
 
@@ -1324,14 +1330,6 @@ fun inlineExample(l:Lock) {
 ___
 
 > Android Reimagined
-
-___
-
-## Freedom to Reimagine
-
-> The flexibility & functionality of functions allow us to break away from traditional java conventions and reimagine how we build our projects
-
-^ We're going to explore function's from their basics variants to more complex iterations
 
 ___
 
