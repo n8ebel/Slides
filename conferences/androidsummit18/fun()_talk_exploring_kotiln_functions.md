@@ -10,15 +10,12 @@ slidenumbers: true
 
 ### @n8ebel
 
-^ At this point, I think it's safe to say most everybody here has at least heard of Kotlin
-
-^ If not, no worries.  I'm not going to make you raise your hand
-^ However, I encourage you to check it out
-^ And hopefully this will spark your curiosity
+^ Today we're going to explore functions in kotlin
 ___
 
 > ♥️ == Kotlin + Functions
 
+^ We're going to explore function's from their basics variants to more complex iterations
 ___
 [.build-lists: true]
 
@@ -28,7 +25,6 @@ ___
 - Higher-order functions
 - Rich `stdlib`
 
-^ functions aren't strictly tied to a class or object
 ___
 
 # ♥️ == Kotlin + Functions
@@ -48,7 +44,9 @@ Functions in Kotlin:
 - Flexible & Convenient
 - Enable Freedom to Reimagine
 
-^ We're going to explore function's from their basics variants to more complex iterations
+^ We are going to build our understanding together
+
+^ from basics, we will add to our knowledge and see how Kotlin functions enable a great developer experience
 
 ___
 
@@ -58,13 +56,14 @@ ___
 
 ## Easy to Get Started
 
-^ getting started with Kotlin functions is easy
+^ multiple ways to get started
+
+^ Simple to start, but much to learn
 
 - Can use the IDE conversion tool
 - Can try online (https://try.kotlinlang.org)
 - Easy to transfer existing knowledge
 
-^ but much more to discover
 ___
 
 # [fit] From Java to Kotlin
@@ -76,6 +75,7 @@ ___
 # Hello Java Method
 
 ^ here we have the Java method that we probably all know
+
 ^ return type, name, method body
 
 ```java
@@ -341,6 +341,7 @@ helloFunctions(excitingThing = "functions", exclamation = "Hooray")
 // all output "Hooray, functions"
 ```
 ^ notice we've reversed the order in which these are passed
+
 ^ by providing the name, the correct behavior is achieved
 
 ^ This allows for a reduced number of overloads compared to other languages:
@@ -349,7 +350,7 @@ ___
 
 # Named Argument Limitations
 
-There are limitations to how named & positioned arguments are used
+- there are limitations to how named & positioned arguments are used
 - once an argument name is specified, all subsequent arguments must be named as well
 
 ___
@@ -387,9 +388,9 @@ ___
 
 ^ like in Java
 
-We can define a parameter to accept a variable number of arguments `T`
+We can define a parameter to accept a variable number of arguments __T__
 - use the __vararg__ keyword
-- the __vararg__ param is then treated as an array of type T
+- __vararg__ param is then treated as an array of type __T__
 - default value must now be an array
 ___
 
@@ -418,16 +419,16 @@ ___
 # Variable Number of Arguments
 
 Typically, a __vararg__ parameter will be the last one
-
+<br>
 Can be used in any order if:
-- other parameters are called using named argument syntax
-- last parameter is a function passed outside the parentheses
+- other params are called using named argument syntax
+- last param is a function passed outside the parentheses
 
 ___
 
 # Variable Number of Arguments
 
-This works great
+This works
 
 ```Kotlin
 helloFunctions("yay!", "Android Summit", "Kotlin", "Android")
@@ -602,7 +603,9 @@ ___
 - Swap your "Util" or "Helper" classes with functions
 
 ^ great for functionality that is widely used
+
 ^ ex: threading helpers, loggers
+
 ^ possibly even fewer classes/objects to be dependent on
 
 ___
@@ -628,15 +631,6 @@ ___
 
 # Top-Level Function Considerations
 
-```Kotlin
-// call from Kotlin
-log(Throwable("oops"))
-```
-
-___
-
-# Top-Level Function Considerations
-
 __Generated Code__
 <br>
 
@@ -649,13 +643,15 @@ ___
 
 # Top-Level Function Considerations
 
+```Kotlin
+// call from Kotlin
+log(Throwable("oops"))
+```
 ```Java
 // call from Java
 LoggingKt.log(new Throwable("oops"))
 ```
-
 ^ notice the name of the generated class
-
 ___
 
 # Top-Level Function Considerations
@@ -681,6 +677,11 @@ fun log(error:Throwable) {...}
 ___
 
 # Top-Level Function Considerations
+
+```Kotlin
+// call from Kotlin
+log(Throwable("oops"))
+```
 
 ```Java
 // call from Java
@@ -1244,6 +1245,9 @@ synchronized(database) {
   database.prePopulate()
 }
 ```
+
+^ this example sets up the point about inline functions
+
 ___
 
 # Higher-Order Function Performance
@@ -1359,11 +1363,12 @@ ___
 
 # Upgrade Our Apis
 
-Can use extensions, default params, etc to cleanup/simplify common apis
+Can use extensions, default params, etc to cleanup/simplify/extend common apis
 
 - Now seeing community supported examples of this
 - Android KTX: https://github.com/android/android-ktx
 - Anko: https://github.com/Kotlin/anko
+- Arrow: https://arrow-kt.io/
 
 ___
 
@@ -1422,8 +1427,7 @@ ___
 - arrayOf(), listOf(), mapOf()
 - associateBy(), groupBy()
 - map(), mapIndexed()
-- fold(), reduce(), sum()
-- filter(), partition()
+- reduce(), sum(), filter(), partition()
 
 ___
 
