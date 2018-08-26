@@ -81,22 +81,43 @@ ___
 
 ___
 
-# Individual
-- flexibility
+# Individual Benefits: Time
+
 - work/life balance
-- locational freedom, new job != new location
-- no commute
-- less distratctions / better flow
+- less travel time
+- more time with family & friends
 
 ___
 
-# Organization/Team
-- diversity
-- easier meetings/scheduling
-- larger talent pool
-- increased productivity
+# Individual Benefits: Flexibility
+
+- flexible hours
+- flexible location
+- cost of living
+- locational freedom
+- new job != new location
+
+___
+
+# Individual Benefits: Productivity
+
+- less distractions
+- better flow
+- more personalized workspace
+
+___
+
+# Organization/Team Benefits
 - lower costs
+- larger talent pool
+- diversity
 - increased retention
+
+___
+
+# Organization/Team Benefits
+- easier meetings/scheduling
+- increased productivity
 
 ___
 
@@ -104,28 +125,39 @@ ___
 
 ___
 
-# Organization
-- invest in support
-- hire for remote work
+# Organization: Support
+- invest in supportive technologies
+- develop clear policies & expectations
 
 ___
 
-# Team
+# Organization: Hiring
+- hiring from a larger talent pool
+- screening a more diverse set of applicants
+- selecting for remote-friendly traits
+
+___
+
+# Team: Communication
 - communication with whole team
 - spontaneous ideation
+
+___
+
+# Team: Engagement
 - equal contribution
-- set expectations
 - team building
+
+___
+
+# Team: Timezones
 - timezones
 
 ___
 
 # Individual
-- discipline
-- build a routine
+- staying productive
 - boundaries
-- have a dedicated work space.  home is not your work
-- being focused, present
 - isolation
 - no catering/snacks/perks
 
@@ -139,18 +171,30 @@ ___
 
 ___
 
-## Communication
-- async. patience
+# Communication
+- set expectations
+- be intentional
+- embrace various mediums
+
+___
+
+# Communication: Set Expectations
+- async
 - core hours
+
+___
+
+# Communication: Be Intentional
 - over communication.  share your work, questions, concerns, ideas
-- empathy
-- introverts
+- documentation
+
+___
+
+# Communication: Different Mediums
+
+- open to escalation
 - use video, emoji, images to make up for lack of non-verbal cues
 - always put a face to the voice
-- documentation
-- groups > 1:1
-- open to escalation
-- find/reserve a quite space for video
 
 ___
 
@@ -158,23 +202,34 @@ ___
 
 ___
 
-## Engagement
-- Team Building
-- buy in
-- trust
+# Engagement
 - must be first-party citizens
+- buy in
 - trust from day one
-- value/seek input & views from everyone
 
 ___
 
-## Engagement
+# Engagement
 - schedule time to chat as a team
-- make time to discuss & brainstorm in a high-bandwidth manner
 - regular sync ups
-- team onsites
-- once in a while, have everyone work on the same thing (techdebt)
 - encourage casual communication
+- team onsites
+
+___
+
+# Engagement
+
+- Team Building
+- once in a while, have everyone work on the same thing (techdebt)
+- lunch & learn, conferences, etc
+
+___
+
+# Engagement
+- make time to discuss & brainstorm in a high-bandwidth manner
+- value/seek input & views from everyone
+- groups > 1:1
+- find/reserve a quite space for video
 
 ___
 
@@ -182,11 +237,23 @@ ___
 
 ___
 
-## Workflows
+# Workflows: Planning
 - planning
+
+___
+
+# Workflows: Reviews
 - code review
-- pair programming
 - design review
+
+___
+
+# Workflows: Pair Programming
+- pair programming
+
+___
+
+# Workflows: QA
 - qa / bug-bash
 
 ___
@@ -240,6 +307,7 @@ ___
 
 > __"Don't you get distracted when working from home?"__
 
+^ have a dedicated work space.  home is not your work
 ___
 
 > __"Don't you get lonely working from home?"__
@@ -248,6 +316,10 @@ ___
 
 > __"How do you stay productive when not in an office?"__
 
+^ discipline
+^ build a routine
+^ boundaries
+^ being focused, present
 ___
 
 > Working Effectively Across Spacetime
