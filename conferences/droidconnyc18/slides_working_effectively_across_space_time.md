@@ -9,37 +9,62 @@ build-lists: true
 
 ___
 
-# Working Effectively Across Spacetime
-## Remote Work
-- sounds great
-- increasing in popularity
+# About Me
+
+- Android dev at Udacity
+- last 2+ years fully remote
+- currently based in Seattle
+
+^ have lived/worked in California, Idaho, & Seattle
+___
+
+# Our Team
+
+- 75% remote
+- 2 continents
+- 3 countries
+- 4 timezones
+
+^ 75% of team is not at HQ
 
 ___
 
-> "What is a remote team?"
+> remote work sounds great
 
 ___
 
-> "How can teams work effectively when spread across locations and timezones?"
+# Increasing Popularity
+- 60% companies offer telecommuting opportunities [^1]
+- 37% would change jobs to work where the want [^2]
+- 11.5%/year increase in fully remote programmers [^2]
+
+[^1]: 2016 Society for Human Resource Management (SHRM) benefits survey
+
+[^2]: Gallup - https://news.gallup.com/reports/199961/7.aspx
 
 ___
 
-# Working Effectively Across Spacetime
-- remote success doesn't happen by accident
+> remote success doesn't happen by accident
+
+___
+
+> __How can teams work effectively when spread across locations and timezones?__
 
 ___
 
 # Working Effectively Across Spacetime
 Requires:
+
 - trust
 - communication
+- engagement
 - proper tools
-- empathy
 
 ___
 
 # Working Effectively Across Spacetime
 What We'll Cover:
+
 - benefits & challenges
 - communication strategies
 - team engagement
@@ -62,18 +87,26 @@ ___
 - remote first
 - spread across locations & timezones
 - practices & technologies in place
+- 5% increase from 2012 - 2016 [^3]
+
+[^3]: Gallup - https://news.gallup.com/reports/199961/7.aspx
 
 ^ without it, it's not the norm and it's easy to let things slide
 
 ___
 
 # Why The Distinction?
-- differences in technology, policies, home setups
+- differences in technology, policies, workflows
 - easier to let things slide
 
-___
+^ home office not setup
 
-> "Why Go Remote?"
+^ bad internet
+___
+[.slidenumbers: false]
+[.hide-footer]
+
+![](images/why_go_remote.png)
 
 ___
 
@@ -81,11 +114,21 @@ ___
 
 ___
 
+![right fit](images/benefits.png)
+
+## What's the biggest benefit to working remotely? [^4]
+
+[^4]: Buffer - State of Remote Work 2018 Report
+
+___
+
 # Individual Benefits: Time
 
-- work/life balance
-- less travel time
+- 53% say greater work/life balance "very important" [^5]
+- less travel time & expense
 - more time with family & friends
+
+[^5]: Gallup - https://news.gallup.com/reports/199961/7.aspx
 
 ___
 
@@ -94,16 +137,27 @@ ___
 - flexible hours
 - flexible location
 - cost of living
-- locational freedom
-- new job != new location
+- new location != new job
 
 ___
 
 # Individual Benefits: Productivity
 
-- less distractions
-- better flow
-- more personalized workspace
+- control over working environment
+- fewer distractions -> increased flow
+- 10-15% increase in productivity with less observation [^6]
+
+[^6]: http://journals.sagepub.com/doi/abs/10.1177/0001839212453028
+
+^ more personalized workspace
+
+^ Harvard Business School survey
+
+___
+
+> **"90% of remote workers plan on working remotely for the rest of their careers" [^7]**
+
+[^7]: Buffer - State of Remote Work 2018 Report
 
 ___
 
@@ -126,32 +180,32 @@ ___
 ___
 
 # Organization: Support
-- invest in supportive technologies
-- develop clear policies & expectations
+- must invest in supportive technologies
+- must develop clear policies & expectations
+- must trust employees
 
 ___
 
 # Organization: Hiring
-- hiring from a larger talent pool
+- larger talent pool to screen
 - screening a more diverse set of applicants
 - selecting for remote-friendly traits
 
 ___
 
-# Team: Communication
-- communication with whole team
-- spontaneous ideation
-
-___
-
 # Team: Engagement
+- full team communication
 - equal contribution
 - team building
+- timezones
 
 ___
 
-# Team: Timezones
-- timezones
+![right fit](images/challenges.png)
+
+## What's the biggest struggle with working remotely? [^7]
+
+[^7]: Buffer - State of Remote Work 2018 Report
 
 ___
 
@@ -162,8 +216,10 @@ ___
 - no catering/snacks/perks
 
 ___
+[.slidenumbers: false]
+[.hide-footer]
 
-> "How Can You Develop An Effective Remote Team?"
+![](images/how_can_develop.png)
 
 ___
 
@@ -179,22 +235,33 @@ ___
 ___
 
 # Communication: Set Expectations
-- async
+- async communication
 - core hours
+- define where communication happens
 
 ___
 
 # Communication: Be Intentional
-- over communication.  share your work, questions, concerns, ideas
-- documentation
+- over communicate
+- document & share your work
+- share questions, concerns, ideas
+
+^ might feel like you're over communicating at first
+
+^ be thorough in documenting requirements, questions, progress
 
 ___
 
 # Communication: Different Mediums
 
-- open to escalation
+- escalate when needed
 - use video, emoji, images to make up for lack of non-verbal cues
 - always put a face to the voice
+- find a quite space for video
+
+^ don't be afraid to move from comment to chat to video when needed
+
+^ make sure all faces are visible during video chats
 
 ___
 
@@ -207,29 +274,41 @@ ___
 - buy in
 - trust from day one
 
+^ trust that you're employees will do their jobs
+
+^ value output
 ___
 
-# Engagement
-- schedule time to chat as a team
-- regular sync ups
+# Engagement: Group Involvement
+- regular sync ups & 1:1s
 - encourage casual communication
-- team onsites
+- schedule time to chat as a team
 
 ___
 
-# Engagement
+# Engagement: Group Involvement
+- make time to discuss & brainstorm in a high-bandwidth manner
+- value/seek input & views from everyone
+- groups > 1:1
 
-- Team Building
-- once in a while, have everyone work on the same thing (techdebt)
+___
+
+# Engagement: Team Building
+
+- team on-sites
+- shared activity weeks: hackathons, tech-debt, etc
 - lunch & learn, conferences, etc
 
 ___
 
-# Engagement
-- make time to discuss & brainstorm in a high-bandwidth manner
-- value/seek input & views from everyone
-- groups > 1:1
-- find/reserve a quite space for video
+# Engagement: Build Connections
+
+- assume good intent
+- protect 1:1 time with manager
+- make yourself visible
+- build relationships
+
+^ have allies on other teams
 
 ___
 
@@ -238,23 +317,32 @@ ___
 ___
 
 # Workflows: Planning
-- planning
+- diligently plan
+- document & update requirements
+- enable async assessment of progress
 
+^ easy to update requirements without everyone knowing about it
+
+^ ensure everyone is on the same page
 ___
 
-# Workflows: Reviews
-- code review
-- design review
+# Workflows: Code & Design Review
+- blend async & video review
+- escalate when appropriate
+- leverage available tools
 
 ___
 
 # Workflows: Pair Programming
-- pair programming
+- still fully possible
+- video chat & screen share
 
 ___
 
 # Workflows: QA
-- qa / bug-bash
+- group video & screen share
+- images & video are invaluable
+- shared documents
 
 ___
 
@@ -263,80 +351,109 @@ ___
 ___
 
 ## Tools
-- have proper technology available to you
+- must have proper technology available
 - network connection is your lifeline
 
 ___
 
-## Tools
+## Tools: Chat & Video
 - auto-add video to meetings & conference rooms
-- hangouts, slack video, zoom, skype
-- shared docs
-- vysor
+- Slack
+- Hangouts, Zoom
+- Google Docs, Sheets, Forms, etc
+- Vysor
 
 ___
 
-## Tools
-- jira, trello, github issues/wiki
+## Tools: Planning & Documentation
+- Jira, Trello, GitHub issues
+- Confluence, GitHub wiki
 
 ___
 
-## Tools
-- GitHub
+## Tools: Code & Design
+- GitHub, GitLab
 - InVision
 
 ___
 
-## Tools
+## Tools: Secret Sharing
 - LastPass, Dashlane
-
-## Tools
-- World Time Buddy
-- doodle
-- slack polls
 
 ___
 
-> Preemptive QA
+## Tools: Misc
+- World Time Buddy
+- Doodle
+- Slack polls
+- QuickTime, screenshot
+
+___
+[.slidenumbers: false]
+[.hide-footer]
+
+![](images/faq.png)
 
 ___
 
 > __"How do you manage working across timezone differences?"__
 
-___
+^ depends on the time difference
 
-> __"Don't you get distracted when working from home?"__
+^ define "working hours" & embrace async communication
 
-^ have a dedicated work space.  home is not your work
-___
+^ set expectation of shared responsibility
 
-> __"Don't you get lonely working from home?"__
+^ practice empathy, be flexible
 
+^ embrace the difference as extra maker time
+
+^ embrace the continuous development cycles
 ___
 
 > __"How do you stay productive when not in an office?"__
 
 ^ discipline
-^ build a routine
+
+^ build a routine.  get ready.  start/end times
+
+^ have a dedicated work space.  home is not your work
+
 ^ boundaries
+
 ^ being focused, present
+
+^ change venues
+___
+
+> __"Don't you get lonely working from home?"__
+
+^ mindful of social requirements
+
+^ casual team communication
+
+^ social media
+
+^ local communities
+
+^ change venues
 ___
 
 > Working Effectively Across Spacetime
 
 ___
+[.slidenumbers: false]
+[.hide-footer]
 
-> Effective Remote Teams Don't Happen By Accident
+![](images/no_accident.png)
 
 ___
 
 # Effective Remote Teams
 
-- must be intentional in communication, cultivating engagement, and supporting remote-first workflows
-
-___
-
-Check out my blog post
+- communicate intentionally
+- cultivate engagement
+- develop remote-first workflows
 
 ___
 [.slidenumbers: false]

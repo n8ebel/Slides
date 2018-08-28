@@ -6,6 +6,11 @@
 - Flexibility of work, saves travel time
 - No commute time. Less distractions. Flexible working environment
 
+- work life balance
+
+flexibility
+get into flow
+
 ## Team Benefits
 
 - I think it's easier to achieve a diversity of cultures with a team that doesn't strictly have to be in the same place.
@@ -15,6 +20,11 @@
 - More diversity
 
 - Flexible environment, more diverse talent pool, Canadian jokes.
+
+## Org benefits
+- talent pool
+- lower costs
+- retention
 
 
 # Challenges
