@@ -16,6 +16,8 @@ ___
 - currently based in Seattle
 
 ^ have lived/worked in California, Idaho, & Seattle
+
+^ have used remote work to the fullest
 ___
 
 # Our Team
@@ -87,9 +89,9 @@ ___
 - remote first
 - spread across locations & timezones
 - practices & technologies in place
-- 5% increase from 2012 - 2016 [^3]
+- 5% increase from 2012 - 2016 [^2]
 
-[^3]: Gallup - https://news.gallup.com/reports/199961/7.aspx
+[^2]: Gallup - https://news.gallup.com/reports/199961/7.aspx
 
 ^ without it, it's not the norm and it's easy to let things slide
 
@@ -116,19 +118,19 @@ ___
 
 ![right fit](images/benefits.png)
 
-## What's the biggest benefit to working remotely? [^4]
+## What's the biggest benefit to working remotely? [^3]
 
-[^4]: Buffer - State of Remote Work 2018 Report
+[^3]: Buffer - State of Remote Work 2018 Report
 
 ___
 
 # Individual Benefits: Time
 
-- 53% say greater work/life balance "very important" [^5]
+- 53% say greater work/life balance "very important" [^2]
 - less travel time & expense
 - more time with family & friends
 
-[^5]: Gallup - https://news.gallup.com/reports/199961/7.aspx
+[^2]: Gallup - https://news.gallup.com/reports/199961/7.aspx
 
 ___
 
@@ -145,9 +147,9 @@ ___
 
 - control over working environment
 - fewer distractions -> increased flow
-- 10-15% increase in productivity with less observation [^6]
+- 10-15% increase in productivity with less observation [^4]
 
-[^6]: http://journals.sagepub.com/doi/abs/10.1177/0001839212453028
+[^4]: http://journals.sagepub.com/doi/abs/10.1177/0001839212453028
 
 ^ more personalized workspace
 
@@ -155,9 +157,9 @@ ___
 
 ___
 
-> **"90% of remote workers plan on working remotely for the rest of their careers" [^7]**
+> **"90% of remote workers plan on working remotely for the rest of their careers" [^3]**
 
-[^7]: Buffer - State of Remote Work 2018 Report
+[^3]: Buffer - State of Remote Work 2018 Report
 
 ___
 
@@ -203,9 +205,9 @@ ___
 
 ![right fit](images/challenges.png)
 
-## What's the biggest struggle with working remotely? [^7]
+## What's the biggest struggle with working remotely? [^3]
 
-[^7]: Buffer - State of Remote Work 2018 Report
+[^3]: Buffer - State of Remote Work 2018 Report
 
 ___
 
@@ -223,7 +225,7 @@ ___
 
 ___
 
-> __Communication Is Paramount__
+> __Communication Is Key__
 
 ___
 
@@ -357,11 +359,11 @@ ___
 ___
 
 ## Tools: Chat & Video
-- auto-add video to meetings & conference rooms
 - Slack
 - Hangouts, Zoom
 - Google Docs, Sheets, Forms, etc
 - Vysor
+- auto-add video to meetings & conference rooms
 
 ___
 
@@ -393,6 +395,10 @@ ___
 [.hide-footer]
 
 ![](images/faq.png)
+
+___
+
+> __"Do you work in your pajamas every day?"__
 
 ___
 
