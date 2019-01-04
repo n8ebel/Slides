@@ -14,18 +14,14 @@ Do you report & notify quickly when issues arise?
 
 ## Abstract
 
-Mobile moves fast, and so do you. To meet your deadlines, you want to build quickly, and confidently.
+Mobile moves fast, and so do you. To meet your deadlines, you want to build the right thing, at the right time; every time.
 
-Your continuous integration pipeline allows you to do this, but can it do more? How can you ensure you're building the correct thing, with quality code, every time?
+Your continuous integration pipeline allows you to do this, but can it do more?
 
-In this talk, you'll what tools are available at every step of the development process.
-
-- How can you enforce coding formatting and styling conventions?
-
-- When and what do you build? Do you build everything on every commit? Do you have a daily build or customize your build per branch?
-
-- How are you testing? What do you record and analyze? Do your screens look correct? Is your apk getting too large?
-
+- How can you enforce coding formatting, styling conventions, and best practices?
+- Do you build everything on every commit? Do you have a daily build or customize your build per branch?
+- What do you record and analyze? Are your tests passing? Do your screens look correct? Is your apk getting too large?
 - How do you distribute your apk for testing and release?
+- How do you track, record, and notify quickly when issues arise?
 
-- Do you track, reporting, and notify quickly when issues arise?
+In this talk, you'll what tools are available at every step of the continuous integration pipeline; allowing you to automate as much as possible and dedicate your time to what matters most.
