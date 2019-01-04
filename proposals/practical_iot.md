@@ -3,7 +3,7 @@ Ready to start building the Internet of Things, but aren’t sure where to start
 Android Things makes this easier by enabling you to leverage your existing knowledge, tools, and services to build smart, 
 connected devices. However, the process can seem a bit foreign at first.
 
-In this talk, you'll learn step by step how to build a connected smart display as we walk through the following questions:
+In this talk, you'll learn step by step how to build a connected smart display for comic book collectibles as we walk through the following questions:
 
 - what hardware is needed to get started?
 - how to train a custom TensorFlow Lite model?
