@@ -12,7 +12,7 @@ He loves to chat about Android, tech, careers, geekery or anything else; so feel
 https://i1.wp.com/n8ebel.com/wp-content/uploads/2017/11/00100sPORTRAIT_00100_BURST20171026131537321_COVER-2393758677-1510339187536.jpg?resize=768%2C1024&ssl=1
 
 ## Talk Examples
-My YouTube Channel: https://www.youtube.com/c/NateEbel
+My YouTube Channel: https://www.youtube.com/channel/UCVysWoMPvvHQMEJvRkslbAQ/videos
 Playlist with recording talks availalbe on YouTube https://www.youtube.com/playlist?list=PLEPZdzLLJH96pGHDbXb_RZ4YfmwHESdRK
 - regularly discuss tips/tools/advice for Android developers
 
