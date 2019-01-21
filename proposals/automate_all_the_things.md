@@ -1,5 +1,5 @@
 ## Title
-Always Be Building
+Automate All The Things!
 
 ## 1 Paragraph Summary
 You want to build quickly, and confidently. Your CI pipeline allows you to do this, but can it do more?
